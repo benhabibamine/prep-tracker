@@ -1,389 +1,230 @@
 <!DOCTYPE html>
 <html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>CDG7 Night Prep Tracker - 09/07→10/07/2026</title>
+<title>CDG7 Night Prep Tracker - 10/07→11/07/2026</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f1923;color:#e8eaed;padding:20px}.header{text-align:center;margin-bottom:20px}.header h1{font-size:1.5em;color:#ff9900;margin-bottom:4px}.header .subtitle{color:#8899aa;font-size:0.85em}.badge{display:inline-block;background:#1a2733;border:1px solid #2d4050;border-radius:12px;padding:3px 10px;font-size:0.75em;color:#66bb6a;margin-top:6px}.kpis{display:flex;gap:12px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}.kpi{background:#1a2733;border:1px solid #2d4050;border-radius:12px;padding:12px 18px;text-align:center;min-width:120px}.kpi .value{font-size:1.6em;font-weight:700;color:#ff9900}.kpi .label{font-size:0.7em;color:#8899aa;margin-top:3px}.kpi .value.red{color:#ef5350}.controls{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}.controls input,.controls select{background:#1a2733;border:1px solid #2d4050;border-radius:8px;padding:7px 10px;color:#e8eaed;font-size:0.82em}.controls input{flex:1;min-width:180px}.controls select{min-width:130px}.table-wrap{overflow-x:auto;border-radius:12px;border:1px solid #2d4050}table{width:100%;border-collapse:collapse;font-size:0.8em}thead{background:#1a2733;position:sticky;top:0}th{padding:8px 6px;text-align:left;color:#ff9900;font-weight:600;border-bottom:2px solid #2d4050;white-space:nowrap}td{padding:7px 6px;border-bottom:1px solid #1a2733}tr:hover{background:#1a2733}.num{text-align:right;font-variant-numeric:tabular-nums}.bar-cell{min-width:90px}.bar{height:18px;border-radius:4px;display:flex;overflow:hidden}.bar-prep{background:#ff9900}.bar-dct{background:#42a5f5}.bar-rcv{background:#66bb6a}.type-badge{display:inline-block;padding:2px 5px;border-radius:4px;font-size:0.72em;font-weight:600}.type-AMZN{background:#ff990033;color:#ff9900}.type-3PTY{background:#42a5f533;color:#42a5f5}.legend{display:flex;gap:14px;justify-content:center;margin-bottom:12px;font-size:0.78em}.legend-item{display:flex;align-items:center;gap:4px}.legend-dot{width:10px;height:10px;border-radius:3px}.history-panel{background:#1a2733;border:1px solid #2d4050;border-radius:12px;padding:12px;margin-bottom:16px}.history-panel h3{color:#ff9900;margin-bottom:8px;font-size:0.85em}.chart-container{position:relative;height:120px}.trend-up{color:#66bb6a;font-weight:600}.trend-down{color:#ef5350;font-weight:600}.trend-flat{color:#8899aa}.aa-link{color:#ff9900;text-decoration:none;cursor:pointer}.aa-link:hover{text-decoration:underline}.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:1000;justify-content:center;align-items:center}.modal-overlay.active{display:flex}.modal{background:#0f1923;border:1px solid #ff9900;border-radius:16px;padding:24px;max-width:520px;width:92%;max-height:80vh;overflow-y:auto;position:relative}.modal h2{color:#ff9900;font-size:1.1em;margin-bottom:14px}.modal .close-btn{position:absolute;top:12px;right:16px;color:#8899aa;font-size:1.5em;cursor:pointer}.modal .close-btn:hover{color:#ff9900}.modal-section{background:#1a2733;border:1px solid #2d4050;border-radius:10px;padding:12px;margin-bottom:12px}.modal-section h3{color:#8899aa;font-size:0.78em;margin-bottom:8px;text-transform:uppercase}.detail-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}.detail-item{text-align:center;padding:6px;background:#0f1923;border-radius:8px}.detail-item .val{font-size:1.1em;font-weight:700;color:#ff9900}.detail-item .val.blue{color:#42a5f5}.detail-item .val.green{color:#66bb6a}.detail-item .lbl{font-size:0.65em;color:#667;margin-top:2px}.modal-chart{height:100px;margin:8px 0}.modal-table{width:100%;border-collapse:collapse;font-size:0.82em}.modal-table th{padding:5px;text-align:center;color:#8899aa;border-bottom:1px solid #2d4050}.modal-table td{padding:5px;text-align:center}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f1923;color:#e8eaed;padding:20px}.header{text-align:center;margin-bottom:20px}.header h1{font-size:1.5em;color:#ff9900;margin-bottom:4px}.header .subtitle{color:#8899aa;font-size:0.85em}.badge{display:inline-block;background:#1a2733;border:1px solid #2d4050;border-radius:12px;padding:3px 10px;font-size:0.75em;color:#66bb6a;margin-top:6px}.kpis{display:flex;gap:12px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}.kpi{background:#1a2733;border:1px solid #2d4050;border-radius:12px;padding:12px 18px;text-align:center;min-width:120px}.kpi .value{font-size:1.6em;font-weight:700;color:#ff9900}.kpi .label{font-size:0.7em;color:#8899aa;margin-top:3px}.kpi .value.red{color:#ef5350}.controls{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}.controls input,.controls select{background:#1a2733;border:1px solid #2d4050;border-radius:8px;padding:7px 10px;color:#e8eaed;font-size:0.82em}.controls input{flex:1;min-width:180px}.controls select{min-width:130px}.table-wrap{overflow-x:auto;border-radius:12px;border:1px solid #2d4050}table{width:100%;border-collapse:collapse;font-size:0.8em}thead{background:#1a2733;position:sticky;top:0}th{padding:8px 6px;text-align:left;color:#ff9900;font-weight:600;border-bottom:2px solid #2d4050;white-space:nowrap}td{padding:7px 6px;border-bottom:1px solid #1a2733}tr:hover{background:#1a2733}.num{text-align:right;font-variant-numeric:tabular-nums}.bar-cell{min-width:90px}.bar{height:18px;border-radius:4px;display:flex;overflow:hidden}.bar-prep{background:#ff9900}.bar-dct{background:#42a5f5}.bar-rcv{background:#66bb6a}.type-badge{display:inline-block;padding:2px 5px;border-radius:4px;font-size:0.72em;font-weight:600}.type-AMZN{background:#ff990033;color:#ff9900}.type-3PTY{background:#42a5f533;color:#42a5f5}.legend{display:flex;gap:14px;justify-content:center;margin-bottom:12px;font-size:0.78em}.legend-item{display:flex;align-items:center;gap:4px}.legend-dot{width:10px;height:10px;border-radius:3px}.aa-link{color:#ff9900;text-decoration:none;cursor:pointer}.aa-link:hover{text-decoration:underline}.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:1000;justify-content:center;align-items:center}.modal-overlay.active{display:flex}.modal{background:#0f1923;border:1px solid #ff9900;border-radius:16px;padding:24px;max-width:520px;width:92%;max-height:80vh;overflow-y:auto;position:relative}.modal h2{color:#ff9900;font-size:1.1em;margin-bottom:14px}.modal .close-btn{position:absolute;top:12px;right:16px;color:#8899aa;font-size:1.5em;cursor:pointer}.modal .close-btn:hover{color:#ff9900}.modal-section{background:#1a2733;border:1px solid #2d4050;border-radius:10px;padding:12px;margin-bottom:12px}.modal-section h3{color:#8899aa;font-size:0.78em;margin-bottom:8px;text-transform:uppercase}.detail-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}.detail-item{text-align:center;padding:6px;background:#0f1923;border-radius:8px}.detail-item .val{font-size:1.1em;font-weight:700;color:#ff9900}.detail-item .val.blue{color:#42a5f5}.detail-item .val.green{color:#66bb6a}.detail-item .lbl{font-size:0.65em;color:#667;margin-top:2px}
 </style></head><body>
-<div class="header"><h1>🚀 CDG7 Night Prep Tracker</h1><div class="subtitle">Nuit du 09/07 au 10/07/2026 — Shift 21h30 - 05h00</div><div class="badge">✅ MAJ 04h45 CEST (6/6)</div></div>
-<div class="kpis"><div class="kpi"><div class="value">26</div><div class="label">Prépareurs</div></div><div class="kpi"><div class="value">96.3h</div><div class="label">H.Prep</div></div><div class="kpi"><div class="value">12 488</div><div class="label">Units</div></div><div class="kpi"><div class="value">129.66</div><div class="label">UPH Moy</div></div><div class="kpi"><div class="value red">7094</div><div class="label">U.Perdues</div></div></div>
-<div class="history-panel"><h3>📈 Historique UPH Global</h3><div class="chart-container"><canvas id="hC"></canvas></div></div>
+<div class="header"><h1>🚀 CDG7 Night Prep Tracker</h1><div class="subtitle">Nuit du 10/07 au 11/07/2026 — Shift 21h30 - 05h00</div><div class="badge">✅ MAJ 04h55 CEST (1/1)</div></div>
+<div class="kpis"><div class="kpi"><div class="value">15</div><div class="label">Prépareurs</div></div><div class="kpi"><div class="value">15.6h</div><div class="label">H.Prep</div></div><div class="kpi"><div class="value">2 650</div><div class="label">Units</div></div><div class="kpi"><div class="value">169.7</div><div class="label">UPH Moy</div></div><div class="kpi"><div class="value red">2181</div><div class="label">U.Perdues</div></div></div>
 <div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#ff9900"></div>Prep</div><div class="legend-item"><div class="legend-dot" style="background:#42a5f5"></div>Decant</div><div class="legend-item"><div class="legend-dot" style="background:#66bb6a"></div>Receive</div></div>
 <div class="controls"><input type="text" id="search" placeholder="🔍 Recherche..." oninput="fT()"><select id="fM" onchange="fT()"><option value="">Tous mgr</option></select><select id="fType" onchange="fT()"><option value="">Tous</option><option value="AMZN">AMZN</option><option value="3PTY">3PTY</option></select></div>
 <div class="table-wrap"><table id="dT"><thead><tr><th>Nom</th><th>Mgr</th><th>Type</th><th class="num">H.P</th><th class="num">UPH</th><th class="num">Evol.</th><th class="num">H.D</th><th class="num">H.R</th><th class="num">%P</th><th class="num">%D</th><th class="num">%R</th><th class="num" style="color:#ef5350">U.Perd</th><th class="bar-cell">Rep.</th></tr></thead><tbody>
-<tr data-name="domingos,vincent" data-id="109618351" data-manager="MARDI,Yassir" data-type="AMZN">
-<td><a class="aa-link" onclick="showDetail('109618351')">Domingos,Vincent</a></td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">5.72</td>
-<td class="num" style="font-weight:600">273</td>
-<td class="num"><span class="trend-flat">+4</span></td>
+<tr data-name="seck,sadio sophie" data-id="207316709" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td><a class="aa-link" onclick="showDetail('207316709')">Seck,Sadio sophie</a></td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
 <td class="num">0.01</td>
-<td class="num">1.13</td>
-<td class="num">83%</td>
-<td class="num">0%</td>
-<td class="num">16%</td>
-<td class="num" style="color:#ef5350;font-weight:600">311</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:83%"></div><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:16%"></div></div></td>
+<td class="num" style="font-weight:600">939</td>
+<td class="num">—</td>
+<td class="num">1.38</td>
+<td class="num">0.19</td>
+<td class="num">1%</td>
+<td class="num">87%</td>
+<td class="num">12%</td>
+<td class="num" style="color:#ef5350;font-weight:600">1474</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:1%"></div><div class="bar-dct" style="width:87%"></div><div class="bar-rcv" style="width:12%"></div></div></td>
 </tr><tr data-name="kantiono,sandrine" data-id="204238020" data-manager="MARDI,Yassir" data-type="AMZN">
 <td><a class="aa-link" onclick="showDetail('204238020')">Kantiono,Sandrine</a></td>
 <td>MARDI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">5.08</td>
-<td class="num" style="font-weight:600">205</td>
-<td class="num"><span class="trend-down">▼-13</span></td>
-<td class="num">0.19</td>
-<td class="num">1.19</td>
-<td class="num">79%</td>
-<td class="num">3%</td>
-<td class="num">18%</td>
-<td class="num" style="color:#ef5350;font-weight:600">283</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:79%"></div><div class="bar-dct" style="width:3%"></div><div class="bar-rcv" style="width:18%"></div></div></td>
-</tr><tr data-name="seck,sadio sophie" data-id="207316709" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207316709')">Seck,Sadio sophie</a></td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">2.36</td>
-<td class="num" style="font-weight:600">165</td>
-<td class="num"><span class="trend-up">▲+59</span></td>
-<td class="num">0.20</td>
-<td class="num">3.98</td>
-<td class="num">36%</td>
-<td class="num">3%</td>
-<td class="num">61%</td>
-<td class="num" style="color:#ef5350;font-weight:600">689</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:36%"></div><div class="bar-dct" style="width:3%"></div><div class="bar-rcv" style="width:61%"></div></div></td>
-</tr><tr data-name="mangara,makoroba" data-id="200708239" data-manager="MARDI,Yassir" data-type="AMZN">
-<td><a class="aa-link" onclick="showDetail('200708239')">Mangara,Makoroba</a></td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">4.49</td>
-<td class="num" style="font-weight:600">156</td>
-<td class="num"><span class="trend-up">▲+6</span></td>
-<td class="num">0.15</td>
-<td class="num">1.18</td>
-<td class="num">77%</td>
-<td class="num">3%</td>
-<td class="num">20%</td>
-<td class="num" style="color:#ef5350;font-weight:600">207</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:77%"></div><div class="bar-dct" style="width:3%"></div><div class="bar-rcv" style="width:20%"></div></div></td>
-</tr><tr data-name="frere,julie" data-id="200377174" data-manager="MARDI,Yassir" data-type="AMZN">
-<td><a class="aa-link" onclick="showDetail('200377174')">Frere,Julie</a></td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">2.56</td>
-<td class="num" style="font-weight:600">153</td>
-<td class="num"><span class="trend-up">▲+19</span></td>
 <td class="num">1.11</td>
-<td class="num">1.10</td>
-<td class="num">54%</td>
-<td class="num">23%</td>
-<td class="num">23%</td>
-<td class="num" style="color:#ef5350;font-weight:600">338</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:54%"></div><div class="bar-dct" style="width:23%"></div><div class="bar-rcv" style="width:23%"></div></div></td>
-</tr><tr data-name="keita,marie claire" data-id="112871277" data-manager="MARDI,Yassir" data-type="AMZN">
-<td><a class="aa-link" onclick="showDetail('112871277')">Keita,Marie Claire</a></td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">6.33</td>
-<td class="num" style="font-weight:600">147</td>
-<td class="num"><span class="trend-flat">-2</span></td>
-<td class="num">0.03</td>
-<td class="num">0.76</td>
-<td class="num">89%</td>
+<td class="num" style="font-weight:600">338</td>
+<td class="num">—</td>
+<td class="num">0.00</td>
+<td class="num">0.47</td>
+<td class="num">70%</td>
 <td class="num">0%</td>
-<td class="num">11%</td>
-<td class="num" style="color:#ef5350;font-weight:600">116</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:89%"></div><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:11%"></div></div></td>
-</tr><tr data-name="houssene,hassanaty" data-id="207399397" data-manager="MARDI,Yassir" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207399397')">Houssene,Hassanaty</a></td>
-<td>MARDI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">3.10</td>
-<td class="num" style="font-weight:600">139</td>
-<td class="num"><span class="trend-down">▼-8</span></td>
-<td class="num">2.00</td>
-<td class="num">1.97</td>
-<td class="num">44%</td>
-<td class="num">28%</td>
-<td class="num">28%</td>
-<td class="num" style="color:#ef5350;font-weight:600">551</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:44%"></div><div class="bar-dct" style="width:28%"></div><div class="bar-rcv" style="width:28%"></div></div></td>
-</tr><tr data-name="pierret,cécile" data-id="203227835" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td><a class="aa-link" onclick="showDetail('203227835')">PIERRET,Cécile</a></td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">3.13</td>
-<td class="num" style="font-weight:600">132</td>
-<td class="num"><span class="trend-up">▲+33</span></td>
-<td class="num">1.40</td>
-<td class="num">1.64</td>
-<td class="num">51%</td>
-<td class="num">23%</td>
-<td class="num">27%</td>
-<td class="num" style="color:#ef5350;font-weight:600">401</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:51%"></div><div class="bar-dct" style="width:23%"></div><div class="bar-rcv" style="width:27%"></div></div></td>
-</tr><tr data-name="tote gbélé,jeanine ella" data-id="112702178" data-manager="MARDI,Yassir" data-type="AMZN">
-<td><a class="aa-link" onclick="showDetail('112702178')">TOTE GBÉLÉ,Jeanine Ella</a></td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">5.47</td>
-<td class="num" style="font-weight:600">132</td>
-<td class="num"><span class="trend-up">▲+5</span></td>
-<td class="num">0.08</td>
-<td class="num">1.17</td>
-<td class="num">81%</td>
-<td class="num">1%</td>
-<td class="num">17%</td>
-<td class="num" style="color:#ef5350;font-weight:600">164</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:81%"></div><div class="bar-dct" style="width:1%"></div><div class="bar-rcv" style="width:17%"></div></div></td>
-</tr><tr data-name="bouillon,marie christine" data-id="109911539" data-manager="MARDI,Yassir" data-type="AMZN">
-<td><a class="aa-link" onclick="showDetail('109911539')">Bouillon,Marie Christine</a></td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">5.54</td>
-<td class="num" style="font-weight:600">127</td>
-<td class="num"><span class="trend-flat">+3</span></td>
-<td class="num">0.56</td>
-<td class="num">0.66</td>
-<td class="num">82%</td>
-<td class="num">8%</td>
-<td class="num">10%</td>
-<td class="num" style="color:#ef5350;font-weight:600">154</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:82%"></div><div class="bar-dct" style="width:8%"></div><div class="bar-rcv" style="width:10%"></div></div></td>
-</tr><tr data-name="neki,maylis" data-id="207399445" data-manager="MARDI,Yassir" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207399445')">Neki,Maylis</a></td>
-<td>MARDI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">3.54</td>
-<td class="num" style="font-weight:600">117</td>
-<td class="num"><span class="trend-up">▲+8</span></td>
-<td class="num">0.05</td>
-<td class="num">1.82</td>
-<td class="num">65%</td>
-<td class="num">1%</td>
-<td class="num">34%</td>
-<td class="num" style="color:#ef5350;font-weight:600">218</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:65%"></div><div class="bar-dct" style="width:1%"></div><div class="bar-rcv" style="width:34%"></div></div></td>
+<td class="num">30%</td>
+<td class="num" style="color:#ef5350;font-weight:600">159</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:70%"></div><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:30%"></div></div></td>
 </tr><tr data-name="duburcq,fabrice" data-id="200302287" data-manager="MARDI,Yassir" data-type="AMZN">
 <td><a class="aa-link" onclick="showDetail('200302287')">Duburcq,Fabrice</a></td>
 <td>MARDI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">3.72</td>
-<td class="num" style="font-weight:600">117</td>
-<td class="num"><span class="trend-down">▼-20</span></td>
-<td class="num">1.48</td>
-<td class="num">1.92</td>
-<td class="num">52%</td>
-<td class="num">21%</td>
-<td class="num">27%</td>
-<td class="num" style="color:#ef5350;font-weight:600">396</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:52%"></div><div class="bar-dct" style="width:21%"></div><div class="bar-rcv" style="width:27%"></div></div></td>
-</tr><tr data-name="chahid,rachid" data-id="205168778" data-manager="Elkaddouri,Zahira" data-type="AMZN">
-<td><a class="aa-link" onclick="showDetail('205168778')">Chahid,Rachid</a></td>
-<td>Elkaddouri</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">5.29</td>
-<td class="num" style="font-weight:600">110</td>
-<td class="num"><span class="trend-up">▲+5</span></td>
-<td class="num">0.68</td>
-<td class="num">1.15</td>
-<td class="num">74%</td>
+<td class="num">1.22</td>
+<td class="num" style="font-weight:600">235</td>
+<td class="num">—</td>
+<td class="num">0.15</td>
+<td class="num">0.20</td>
+<td class="num">78%</td>
 <td class="num">10%</td>
-<td class="num">16%</td>
-<td class="num" style="color:#ef5350;font-weight:600">202</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:74%"></div><div class="bar-dct" style="width:10%"></div><div class="bar-rcv" style="width:16%"></div></div></td>
-</tr><tr data-name="amdaoud,mounia" data-id="207399399" data-manager="BADI,Aicha" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207399399')">Amdaoud,Mounia</a></td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">3.89</td>
-<td class="num" style="font-weight:600">110</td>
-<td class="num"><span class="trend-flat">-1</span></td>
-<td class="num">1.35</td>
-<td class="num">1.60</td>
-<td class="num">57%</td>
-<td class="num">20%</td>
-<td class="num">23%</td>
-<td class="num" style="color:#ef5350;font-weight:600">324</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:57%"></div><div class="bar-dct" style="width:20%"></div><div class="bar-rcv" style="width:23%"></div></div></td>
+<td class="num">13%</td>
+<td class="num" style="color:#ef5350;font-weight:600">82</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:78%"></div><div class="bar-dct" style="width:10%"></div><div class="bar-rcv" style="width:13%"></div></div></td>
 </tr><tr data-name="dada,lisiane" data-id="207399485" data-manager="MARDI,Yassir" data-type="3PTY">
 <td><a class="aa-link" onclick="showDetail('207399485')">Dada,Lisiane</a></td>
 <td>MARDI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">5.50</td>
-<td class="num" style="font-weight:600">107</td>
-<td class="num"><span class="trend-flat">+1</span></td>
-<td class="num">0.66</td>
-<td class="num">0.90</td>
-<td class="num">78%</td>
-<td class="num">9%</td>
-<td class="num">13%</td>
-<td class="num" style="color:#ef5350;font-weight:600">167</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:78%"></div><div class="bar-dct" style="width:9%"></div><div class="bar-rcv" style="width:13%"></div></div></td>
-</tr><tr data-name="hertier,romane" data-id="202915096" data-manager="MARDI,Yassir" data-type="AMZN">
-<td><a class="aa-link" onclick="showDetail('202915096')">Hertier,Romane</a></td>
+<td class="num">1.31</td>
+<td class="num" style="font-weight:600">220</td>
+<td class="num">—</td>
+<td class="num">0.00</td>
+<td class="num">0.27</td>
+<td class="num">83%</td>
+<td class="num">0%</td>
+<td class="num">17%</td>
+<td class="num" style="color:#ef5350;font-weight:600">59</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:83%"></div><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:17%"></div></div></td>
+</tr><tr data-name="keita,marie claire" data-id="112871277" data-manager="MARDI,Yassir" data-type="AMZN">
+<td><a class="aa-link" onclick="showDetail('112871277')">Keita,Marie Claire</a></td>
 <td>MARDI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">2.95</td>
-<td class="num" style="font-weight:600">107</td>
-<td class="num"><span class="trend-flat">+2</span></td>
-<td class="num">0.09</td>
-<td class="num">0.88</td>
-<td class="num">75%</td>
-<td class="num">2%</td>
-<td class="num">22%</td>
-<td class="num" style="color:#ef5350;font-weight:600">103</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:75%"></div><div class="bar-dct" style="width:2%"></div><div class="bar-rcv" style="width:22%"></div></div></td>
-</tr><tr data-name="fenni,loubna" data-id="207436889" data-manager="BADI,Aicha" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207436889')">Fenni,Loubna</a></td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.28</td>
-<td class="num" style="font-weight:600">106</td>
-<td class="num"><span class="trend-flat">+0</span></td>
+<td class="num">1.52</td>
+<td class="num" style="font-weight:600">213</td>
+<td class="num">—</td>
 <td class="num">0.00</td>
-<td class="num">0.53</td>
-<td class="num">35%</td>
+<td class="num">0.06</td>
+<td class="num">96%</td>
 <td class="num">0%</td>
-<td class="num">65%</td>
+<td class="num">4%</td>
+<td class="num" style="color:#ef5350;font-weight:600">12</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:96%"></div><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:4%"></div></div></td>
+</tr><tr data-name="pierret,cécile" data-id="203227835" data-manager="Sfaxi,Emna" data-type="AMZN">
+<td><a class="aa-link" onclick="showDetail('203227835')">PIERRET,Cécile</a></td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.27</td>
+<td class="num" style="font-weight:600">178</td>
+<td class="num">—</td>
+<td class="num">0.04</td>
+<td class="num">0.27</td>
+<td class="num">80%</td>
+<td class="num">3%</td>
+<td class="num">17%</td>
 <td class="num" style="color:#ef5350;font-weight:600">55</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:35%"></div><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:65%"></div></div></td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:80%"></div><div class="bar-dct" style="width:3%"></div><div class="bar-rcv" style="width:17%"></div></div></td>
 </tr><tr data-name="wallez,philippe" data-id="201221850" data-manager="MARDI,Yassir" data-type="AMZN">
 <td><a class="aa-link" onclick="showDetail('201221850')">Wallez,Philippe</a></td>
 <td>MARDI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">5.32</td>
-<td class="num" style="font-weight:600">102</td>
-<td class="num"><span class="trend-up">▲+10</span></td>
-<td class="num">0.48</td>
-<td class="num">1.38</td>
-<td class="num">74%</td>
-<td class="num">7%</td>
-<td class="num">19%</td>
-<td class="num" style="color:#ef5350;font-weight:600">190</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:74%"></div><div class="bar-dct" style="width:7%"></div><div class="bar-rcv" style="width:19%"></div></div></td>
-</tr><tr data-name="samar,serina" data-id="207436868" data-manager="BADI,Aicha" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207436868')">Samar,Serina</a></td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">2.54</td>
-<td class="num" style="font-weight:600">96</td>
-<td class="num"><span class="trend-down">▼-15</span></td>
-<td class="num">0.48</td>
-<td class="num">3.94</td>
-<td class="num">36%</td>
-<td class="num">7%</td>
-<td class="num">57%</td>
-<td class="num" style="color:#ef5350;font-weight:600">424</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:36%"></div><div class="bar-dct" style="width:7%"></div><div class="bar-rcv" style="width:57%"></div></div></td>
-</tr><tr data-name="okyar,muzeyyen" data-id="207347068" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207347068')">Okyar,Muzeyyen</a></td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">2.78</td>
-<td class="num" style="font-weight:600">94</td>
-<td class="num"><span class="trend-flat">+3</span></td>
-<td class="num">2.32</td>
-<td class="num">1.65</td>
-<td class="num">41%</td>
-<td class="num">34%</td>
-<td class="num">24%</td>
-<td class="num" style="color:#ef5350;font-weight:600">374</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:41%"></div><div class="bar-dct" style="width:34%"></div><div class="bar-rcv" style="width:24%"></div></div></td>
-</tr><tr data-name="yousuf,shayan" data-id="207436893" data-manager="BADI,Aicha" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207436893')">Yousuf,Shayan</a></td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">2.69</td>
-<td class="num" style="font-weight:600">93</td>
-<td class="num"><span class="trend-flat">-1</span></td>
-<td class="num">0.75</td>
-<td class="num">3.34</td>
-<td class="num">40%</td>
+<td class="num">1.13</td>
+<td class="num" style="font-weight:600">178</td>
+<td class="num">—</td>
+<td class="num">0.02</td>
+<td class="num">0.43</td>
+<td class="num">72%</td>
+<td class="num">1%</td>
+<td class="num">27%</td>
+<td class="num" style="color:#ef5350;font-weight:600">79</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:72%"></div><div class="bar-dct" style="width:1%"></div><div class="bar-rcv" style="width:27%"></div></div></td>
+</tr><tr data-name="tote gbélé,jeanine ella" data-id="112702178" data-manager="MARDI,Yassir" data-type="AMZN">
+<td><a class="aa-link" onclick="showDetail('112702178')">TOTE GBÉLÉ,Jeanine Ella</a></td>
+<td>MARDI</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.18</td>
+<td class="num" style="font-weight:600">148</td>
+<td class="num">—</td>
+<td class="num">0.17</td>
+<td class="num">0.23</td>
+<td class="num">75%</td>
 <td class="num">11%</td>
-<td class="num">49%</td>
-<td class="num" style="color:#ef5350;font-weight:600">379</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:40%"></div><div class="bar-dct" style="width:11%"></div><div class="bar-rcv" style="width:49%"></div></div></td>
-</tr><tr data-name="leon,ludivine" data-id="207347057" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207347057')">Leon,Ludivine</a></td>
-<td>Sfaxi</td>
+<td class="num">15%</td>
+<td class="num" style="color:#ef5350;font-weight:600">59</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:75%"></div><div class="bar-dct" style="width:11%"></div><div class="bar-rcv" style="width:15%"></div></div></td>
+</tr><tr data-name="mangara,makoroba" data-id="200708239" data-manager="MARDI,Yassir" data-type="AMZN">
+<td><a class="aa-link" onclick="showDetail('200708239')">Mangara,Makoroba</a></td>
+<td>MARDI</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.48</td>
+<td class="num" style="font-weight:600">134</td>
+<td class="num">—</td>
+<td class="num">0.02</td>
+<td class="num">0.08</td>
+<td class="num">94%</td>
+<td class="num">1%</td>
+<td class="num">5%</td>
+<td class="num" style="color:#ef5350;font-weight:600">13</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:94%"></div><div class="bar-dct" style="width:1%"></div><div class="bar-rcv" style="width:5%"></div></div></td>
+</tr><tr data-name="bouillon,marie christine" data-id="109911539" data-manager="MARDI,Yassir" data-type="AMZN">
+<td><a class="aa-link" onclick="showDetail('109911539')">Bouillon,Marie Christine</a></td>
+<td>MARDI</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.47</td>
+<td class="num" style="font-weight:600">125</td>
+<td class="num">—</td>
+<td class="num">0.00</td>
+<td class="num">0.11</td>
+<td class="num">93%</td>
+<td class="num">0%</td>
+<td class="num">7%</td>
+<td class="num" style="color:#ef5350;font-weight:600">13</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:93%"></div><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:7%"></div></div></td>
+</tr><tr data-name="chahid,rachid" data-id="205168778" data-manager="Elkaddouri,Zahira" data-type="AMZN">
+<td><a class="aa-link" onclick="showDetail('205168778')">Chahid,Rachid</a></td>
+<td>Elkaddouri</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.32</td>
+<td class="num" style="font-weight:600">114</td>
+<td class="num">—</td>
+<td class="num">0.04</td>
+<td class="num">0.22</td>
+<td class="num">84%</td>
+<td class="num">3%</td>
+<td class="num">14%</td>
+<td class="num" style="color:#ef5350;font-weight:600">29</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:84%"></div><div class="bar-dct" style="width:3%"></div><div class="bar-rcv" style="width:14%"></div></div></td>
+</tr><tr data-name="houssene,hassanaty" data-id="207399397" data-manager="MARDI,Yassir" data-type="3PTY">
+<td><a class="aa-link" onclick="showDetail('207399397')">Houssene,Hassanaty</a></td>
+<td>MARDI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">3.15</td>
-<td class="num" style="font-weight:600">89</td>
-<td class="num"><span class="trend-flat">+3</span></td>
-<td class="num">1.41</td>
-<td class="num">2.18</td>
+<td class="num">0.74</td>
+<td class="num" style="font-weight:600">110</td>
+<td class="num">—</td>
+<td class="num">0.07</td>
+<td class="num">0.77</td>
 <td class="num">47%</td>
-<td class="num">21%</td>
-<td class="num">32%</td>
-<td class="num" style="color:#ef5350;font-weight:600">318</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:47%"></div><div class="bar-dct" style="width:21%"></div><div class="bar-rcv" style="width:32%"></div></div></td>
+<td class="num">4%</td>
+<td class="num">49%</td>
+<td class="num" style="color:#ef5350;font-weight:600">92</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:47%"></div><div class="bar-dct" style="width:4%"></div><div class="bar-rcv" style="width:49%"></div></div></td>
 </tr><tr data-name="daniel,orlane" data-id="207399444" data-manager="MARDI,Yassir" data-type="3PTY">
 <td><a class="aa-link" onclick="showDetail('207399444')">Daniel,Orlane</a></td>
 <td>MARDI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">5.77</td>
-<td class="num" style="font-weight:600">85</td>
-<td class="num"><span class="trend-down">▼-6</span></td>
-<td class="num">0.47</td>
-<td class="num">0.88</td>
-<td class="num">81%</td>
-<td class="num">7%</td>
-<td class="num">12%</td>
-<td class="num" style="color:#ef5350;font-weight:600">114</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:81%"></div><div class="bar-dct" style="width:7%"></div><div class="bar-rcv" style="width:12%"></div></div></td>
-</tr><tr data-name="benhebiche,lyna" data-id="207316724" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207316724')">Benhebiche,Lyna</a></td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.11</td>
-<td class="num" style="font-weight:600">78</td>
-<td class="num"><span class="trend-down">▼-55</span></td>
-<td class="num">1.83</td>
-<td class="num">3.18</td>
-<td class="num">18%</td>
-<td class="num">30%</td>
-<td class="num">52%</td>
-<td class="num" style="color:#ef5350;font-weight:600">388</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:18%"></div><div class="bar-dct" style="width:30%"></div><div class="bar-rcv" style="width:52%"></div></div></td>
+<td class="num">1.36</td>
+<td class="num" style="font-weight:600">103</td>
+<td class="num">—</td>
+<td class="num">0.09</td>
+<td class="num">0.13</td>
+<td class="num">86%</td>
+<td class="num">6%</td>
+<td class="num">8%</td>
+<td class="num" style="color:#ef5350;font-weight:600">22</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:86%"></div><div class="bar-dct" style="width:6%"></div><div class="bar-rcv" style="width:8%"></div></div></td>
 </tr><tr data-name="dessaint,karim" data-id="206184908" data-manager="MARDI,Yassir" data-type="3PTY">
 <td><a class="aa-link" onclick="showDetail('206184908')">Dessaint,Karim</a></td>
 <td>MARDI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">3.57</td>
-<td class="num" style="font-weight:600">66</td>
-<td class="num"><span class="trend-down">▼-16</span></td>
-<td class="num">0.44</td>
-<td class="num">2.97</td>
-<td class="num">51%</td>
-<td class="num">6%</td>
-<td class="num">43%</td>
-<td class="num" style="color:#ef5350;font-weight:600">226</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:51%"></div><div class="bar-dct" style="width:6%"></div><div class="bar-rcv" style="width:43%"></div></div></td>
-</tr><tr data-name="blanchard,loic" data-id="207638736" data-manager="BADI,Aicha" data-type="3PTY">
-<td><a class="aa-link" onclick="showDetail('207638736')">Blanchard,Loic</a></td>
+<td class="num">0.24</td>
+<td class="num" style="font-weight:600">21</td>
+<td class="num">—</td>
+<td class="num">1.03</td>
+<td class="num">0.00</td>
+<td class="num">19%</td>
+<td class="num">81%</td>
+<td class="num">0%</td>
+<td class="num" style="color:#ef5350;font-weight:600">21</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:19%"></div><div class="bar-dct" style="width:81%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="samar,serina" data-id="207436868" data-manager="BADI,Aicha" data-type="3PTY">
+<td><a class="aa-link" onclick="showDetail('207436868')">Samar,Serina</a></td>
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.43</td>
-<td class="num" style="font-weight:600">35</td>
-<td class="num"><span class="trend-flat">+0</span></td>
+<td class="num">0.25</td>
+<td class="num" style="font-weight:600">16</td>
+<td class="num">—</td>
+<td class="num">0.77</td>
 <td class="num">0.00</td>
-<td class="num">0.08</td>
-<td class="num">84%</td>
+<td class="num">25%</td>
+<td class="num">75%</td>
 <td class="num">0%</td>
-<td class="num">16%</td>
-<td class="num" style="color:#ef5350;font-weight:600">2</td>
-<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:84%"></div><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:16%"></div></div></td>
+<td class="num" style="color:#ef5350;font-weight:600">12</td>
+<td class="bar-cell"><div class="bar"><div class="bar-prep" style="width:25%"></div><div class="bar-dct" style="width:75%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
 </tr>
 </tbody></table></div>
-<div class="modal-overlay" id="mO" onclick="cM(event)"><div class="modal" onclick="event.stopPropagation()"><span class="close-btn" onclick="document.getElementById('mO').classList.remove('active')">&times;</span><h2 id="mT"></h2><div class="modal-section"><h3>Heures par process</h3><div class="detail-grid" id="dG"></div><div class="pct-bar" id="dB" style="height:22px;border-radius:6px;display:flex;overflow:hidden;margin-top:8px"></div></div><div class="modal-section"><h3>Units Perdues</h3><div id="lD"></div></div><div class="modal-section"><h3>Evolution UPH</h3><div class="modal-chart"><canvas id="aC"></canvas></div><table class="modal-table"><thead><tr><th>MAJ</th><th>UPH</th><th>Tend.</th></tr></thead><tbody id="mB"></tbody></table></div></div></div>
+<div class="modal-overlay" id="mO" onclick="cM(event)"><div class="modal" onclick="event.stopPropagation()"><span class="close-btn" onclick="document.getElementById('mO').classList.remove('active')">&times;</span><h2 id="mT"></h2><div class="modal-section"><h3>Heures par process</h3><div class="detail-grid" id="dG"></div><div id="dB" style="height:22px;border-radius:6px;display:flex;overflow:hidden;margin-top:8px"></div></div><div class="modal-section"><h3>Units Perdues</h3><div id="lD"></div></div></div></div>
 <script>
-var H=[{"timestamp": "23h05", "global_uph": 87.47, "total_units": 1167, "total_hours": 5.88}, {"timestamp": "00h37", "global_uph": 97.87, "total_units": 2891, "total_hours": 29.54}, {"timestamp": "01h05", "global_uph": 111.98, "total_units": 4373, "total_hours": 39.05}, {"timestamp": "01h55", "global_uph": 121.74, "total_units": 6088, "total_hours": 50.01}, {"timestamp": "03h30", "global_uph": 128.33, "total_units": 9877, "total_hours": 76.97}, {"timestamp": "04h45", "global_uph": 129.66, "total_units": 12488, "total_hours": 96.31}];
-var AH={"109618351": [{"ts": "23h05", "uph": 121.76}, {"ts": "00h37", "uph": 152.95}, {"ts": "01h05", "uph": 165.75}, {"ts": "01h55", "uph": 185.98}, {"ts": "03h30", "uph": 269.56}, {"ts": "04h45", "uph": 273.17}], "109911539": [{"ts": "23h05", "uph": 138.16}, {"ts": "00h37", "uph": 104.37}, {"ts": "01h05", "uph": 119.15}, {"ts": "01h55", "uph": 120.9}, {"ts": "03h30", "uph": 124.3}, {"ts": "04h45", "uph": 126.93}], "112702178": [{"ts": "23h05", "uph": 65.48}, {"ts": "00h37", "uph": 105.65}, {"ts": "01h05", "uph": 129.57}, {"ts": "01h55", "uph": 133.35}, {"ts": "03h30", "uph": 126.66}, {"ts": "04h45", "uph": 131.93}], "112871277": [{"ts": "23h05", "uph": 61.07}, {"ts": "00h37", "uph": 114.46}, {"ts": "01h05", "uph": 136.15}, {"ts": "01h55", "uph": 156.09}, {"ts": "03h30", "uph": 149.49}, {"ts": "04h45", "uph": 147.13}], "200302287": [{"ts": "23h05", "uph": 117.53}, {"ts": "00h37", "uph": 87.23}, {"ts": "01h05", "uph": 144.71}, {"ts": "01h55", "uph": 143.16}, {"ts": "03h30", "uph": 136.37}, {"ts": "04h45", "uph": 116.71}], "200377174": [{"ts": "23h05", "uph": 113.09}, {"ts": "00h37", "uph": 113.09}, {"ts": "01h05", "uph": 86.93}, {"ts": "01h55", "uph": 110.24}, {"ts": "03h30", "uph": 133.75}, {"ts": "04h45", "uph": 152.99}], "200708239": [{"ts": "23h05", "uph": 79.8}, {"ts": "00h37", "uph": 82.83}, {"ts": "01h05", "uph": 128.71}, {"ts": "01h55", "uph": 123.34}, {"ts": "03h30", "uph": 150.13}, {"ts": "04h45", "uph": 155.81}], "201221850": [{"ts": "23h05", "uph": 61.31}, {"ts": "00h37", "uph": 48.72}, {"ts": "01h05", "uph": 66.72}, {"ts": "01h55", "uph": 73.02}, {"ts": "03h30", "uph": 92.53}, {"ts": "04h45", "uph": 102.31}], "202915096": [{"ts": "23h05", "uph": 73.42}, {"ts": "00h37", "uph": 98.19}, {"ts": "01h05", "uph": 102.88}, {"ts": "01h55", "uph": 101.48}, {"ts": "03h30", "uph": 104.76}, {"ts": "04h45", "uph": 107.18}], "203227835": [{"ts": "23h05", "uph": 39.49}, {"ts": "00h37", "uph": 39.49}, {"ts": "01h05", "uph": 32.18}, {"ts": "01h55", "uph": 35.08}, {"ts": "03h30", "uph": 99.11}, {"ts": "04h45", "uph": 131.95}], "204238020": [{"ts": "23h05", "uph": 161.06}, {"ts": "00h37", "uph": 173.99}, {"ts": "01h05", "uph": 169.99}, {"ts": "01h55", "uph": 213.35}, {"ts": "03h30", "uph": 218.12}, {"ts": "04h45", "uph": 205.37}], "205168778": [{"ts": "23h05", "uph": 38.96}, {"ts": "00h37", "uph": 44.27}, {"ts": "01h05", "uph": 59.05}, {"ts": "01h55", "uph": 92.48}, {"ts": "03h30", "uph": 105.33}, {"ts": "04h45", "uph": 110.39}], "206184908": [{"ts": "23h05", "uph": 190.03}, {"ts": "00h37", "uph": 86.75}, {"ts": "01h05", "uph": 83.31}, {"ts": "01h55", "uph": 71.31}, {"ts": "03h30", "uph": 82.25}, {"ts": "04h45", "uph": 66.38}], "207316709": [{"ts": "23h05", "uph": 40.26}, {"ts": "00h37", "uph": 40.26}, {"ts": "01h05", "uph": 144.12}, {"ts": "01h55", "uph": 127.26}, {"ts": "03h30", "uph": 106.22}, {"ts": "04h45", "uph": 164.96}], "207316724": [{"ts": "23h05", "uph": 101.73}, {"ts": "00h37", "uph": 101.73}, {"ts": "01h05", "uph": 126.45}, {"ts": "01h55", "uph": 126.45}, {"ts": "03h30", "uph": 132.8}, {"ts": "04h45", "uph": 77.56}], "207347057": [{"ts": "23h05", "uph": 2016.0}, {"ts": "00h37", "uph": 2016.0}, {"ts": "01h05", "uph": 1894.74}, {"ts": "01h55", "uph": 55.42}, {"ts": "03h30", "uph": 85.37}, {"ts": "04h45", "uph": 88.6}], "207347068": [{"ts": "23h05", "uph": 49.4}, {"ts": "00h37", "uph": 49.4}, {"ts": "01h05", "uph": 47.25}, {"ts": "01h55", "uph": 62.15}, {"ts": "03h30", "uph": 91.68}, {"ts": "04h45", "uph": 94.25}], "207399397": [{"ts": "23h05", "uph": 183.83}, {"ts": "00h37", "uph": 178.05}, {"ts": "01h05", "uph": 176.21}, {"ts": "01h55", "uph": 154.75}, {"ts": "03h30", "uph": 146.48}, {"ts": "04h45", "uph": 138.9}], "207399399": [{"ts": "23h05", "uph": 226.01}, {"ts": "00h37", "uph": 240.67}, {"ts": "01h05", "uph": 226.15}, {"ts": "01h55", "uph": 146.22}, {"ts": "03h30", "uph": 111.06}, {"ts": "04h45", "uph": 110.07}], "207399444": [{"ts": "23h05", "uph": 31.71}, {"ts": "00h37", "uph": 48.65}, {"ts": "01h05", "uph": 69.27}, {"ts": "01h55", "uph": 78.13}, {"ts": "03h30", "uph": 90.39}, {"ts": "04h45", "uph": 84.57}], "207399445": [{"ts": "23h05", "uph": 57.6}, {"ts": "00h37", "uph": 60.7}, {"ts": "01h05", "uph": 135.54}, {"ts": "01h55", "uph": 138.08}, {"ts": "03h30", "uph": 108.45}, {"ts": "04h45", "uph": 116.79}], "207399485": [{"ts": "23h05", "uph": 53.56}, {"ts": "00h37", "uph": 88.57}, {"ts": "01h05", "uph": 94.66}, {"ts": "01h55", "uph": 97.14}, {"ts": "03h30", "uph": 106.58}, {"ts": "04h45", "uph": 107.39}], "207436868": [{"ts": "23h05", "uph": 84.38}, {"ts": "00h37", "uph": 56.07}, {"ts": "01h05", "uph": 75.73}, {"ts": "01h55", "uph": 169.54}, {"ts": "03h30", "uph": 110.98}, {"ts": "04h45", "uph": 95.99}], "207436889": [{"ts": "03h30", "uph": 105.57}, {"ts": "04h45", "uph": 105.57}], "207436893": [{"ts": "23h05", "uph": 135.42}, {"ts": "00h37", "uph": 135.42}, {"ts": "01h05", "uph": 41.83}, {"ts": "01h55", "uph": 86.25}, {"ts": "03h30", "uph": 93.61}, {"ts": "04h45", "uph": 92.87}], "207638736": [{"ts": "23h05", "uph": 35.27}, {"ts": "00h37", "uph": 35.27}, {"ts": "01h05", "uph": 35.27}, {"ts": "01h55", "uph": 35.27}, {"ts": "03h30", "uph": 35.27}, {"ts": "04h45", "uph": 35.27}]};
-var AD={"109618351": {"name": "Domingos,Vincent", "h_prep": 5.72, "h_dct": 0.01, "h_rcv": 1.13, "pct_prep": 83.38192419825073, "pct_dct": 0.1457725947521866, "pct_rcv": 16.472303206997086, "uph_prep": 273.17, "units_perdues": 311}, "109911539": {"name": "Bouillon,Marie Christine", "h_prep": 5.54, "h_dct": 0.56, "h_rcv": 0.66, "pct_prep": 81.9526627218935, "pct_dct": 8.284023668639055, "pct_rcv": 9.763313609467456, "uph_prep": 126.93, "units_perdues": 154}, "112702178": {"name": "TOTE GB\u00c9L\u00c9,Jeanine Ella", "h_prep": 5.47, "h_dct": 0.08, "h_rcv": 1.17, "pct_prep": 81.39880952380952, "pct_dct": 1.1904761904761907, "pct_rcv": 17.410714285714285, "uph_prep": 131.93, "units_perdues": 164}, "112871277": {"name": "Keita,Marie Claire", "h_prep": 6.33, "h_dct": 0.03, "h_rcv": 0.76, "pct_prep": 88.90449438202246, "pct_dct": 0.42134831460674155, "pct_rcv": 10.674157303370785, "uph_prep": 147.13, "units_perdues": 116}, "200302287": {"name": "Duburcq,Fabrice", "h_prep": 3.72, "h_dct": 1.48, "h_rcv": 1.9200000000000002, "pct_prep": 52.24719101123596, "pct_dct": 20.786516853932586, "pct_rcv": 26.96629213483146, "uph_prep": 116.71, "units_perdues": 396}, "200377174": {"name": "Frere,Julie", "h_prep": 2.56, "h_dct": 1.11, "h_rcv": 1.1, "pct_prep": 53.66876310272537, "pct_dct": 23.27044025157233, "pct_rcv": 23.06079664570231, "uph_prep": 152.99, "units_perdues": 338}, "200708239": {"name": "Mangara,Makoroba", "h_prep": 4.49, "h_dct": 0.15, "h_rcv": 1.18, "pct_prep": 77.14776632302406, "pct_dct": 2.5773195876288657, "pct_rcv": 20.274914089347078, "uph_prep": 155.81, "units_perdues": 207}, "201221850": {"name": "Wallez,Philippe", "h_prep": 5.32, "h_dct": 0.48, "h_rcv": 1.3800000000000001, "pct_prep": 74.09470752089136, "pct_dct": 6.685236768802227, "pct_rcv": 19.220055710306408, "uph_prep": 102.31, "units_perdues": 190}, "202915096": {"name": "Hertier,Romane", "h_prep": 2.95, "h_dct": 0.09, "h_rcv": 0.88, "pct_prep": 75.25510204081634, "pct_dct": 2.295918367346939, "pct_rcv": 22.448979591836736, "uph_prep": 107.18, "units_perdues": 103}, "203227835": {"name": "PIERRET,C\u00e9cile", "h_prep": 3.13, "h_dct": 1.4, "h_rcv": 1.6400000000000001, "pct_prep": 50.72933549432739, "pct_dct": 22.690437601296594, "pct_rcv": 26.580226904376016, "uph_prep": 131.95, "units_perdues": 401}, "204238020": {"name": "Kantiono,Sandrine", "h_prep": 5.08, "h_dct": 0.19, "h_rcv": 1.19, "pct_prep": 78.63777089783281, "pct_dct": 2.941176470588235, "pct_rcv": 18.421052631578945, "uph_prep": 205.37, "units_perdues": 283}, "205168778": {"name": "Chahid,Rachid", "h_prep": 5.29, "h_dct": 0.68, "h_rcv": 1.1500000000000001, "pct_prep": 74.29775280898876, "pct_dct": 9.55056179775281, "pct_rcv": 16.15168539325843, "uph_prep": 110.39, "units_perdues": 202}, "206184908": {"name": "Dessaint,Karim", "h_prep": 3.57, "h_dct": 0.44, "h_rcv": 2.9699999999999998, "pct_prep": 51.146131805157594, "pct_dct": 6.303724928366762, "pct_rcv": 42.550143266475644, "uph_prep": 66.38, "units_perdues": 226}, "207316709": {"name": "Seck,Sadio sophie", "h_prep": 2.36, "h_dct": 0.2, "h_rcv": 3.98, "pct_prep": 36.08562691131498, "pct_dct": 3.0581039755351687, "pct_rcv": 60.85626911314984, "uph_prep": 164.96, "units_perdues": 689}, "207316724": {"name": "Benhebiche,Lyna", "h_prep": 1.11, "h_dct": 1.83, "h_rcv": 3.1799999999999997, "pct_prep": 18.137254901960787, "pct_dct": 29.901960784313726, "pct_rcv": 51.96078431372548, "uph_prep": 77.56, "units_perdues": 388}, "207347057": {"name": "Leon,Ludivine", "h_prep": 3.15, "h_dct": 1.41, "h_rcv": 2.18, "pct_prep": 46.73590504451038, "pct_dct": 20.91988130563798, "pct_rcv": 32.34421364985163, "uph_prep": 88.6, "units_perdues": 318}, "207347068": {"name": "Okyar,Muzeyyen", "h_prep": 2.78, "h_dct": 2.32, "h_rcv": 1.65, "pct_prep": 41.18518518518518, "pct_dct": 34.37037037037037, "pct_rcv": 24.444444444444443, "uph_prep": 94.25, "units_perdues": 374}, "207399397": {"name": "Houssene,Hassanaty", "h_prep": 3.1, "h_dct": 2.0, "h_rcv": 1.97, "pct_prep": 43.84724186704385, "pct_dct": 28.28854314002829, "pct_rcv": 27.864214992927867, "uph_prep": 138.9, "units_perdues": 551}, "207399399": {"name": "Amdaoud,Mounia", "h_prep": 3.89, "h_dct": 1.35, "h_rcv": 1.6, "pct_prep": 56.87134502923977, "pct_dct": 19.73684210526316, "pct_rcv": 23.391812865497077, "uph_prep": 110.07, "units_perdues": 324}, "207399444": {"name": "Daniel,Orlane", "h_prep": 5.77, "h_dct": 0.47, "h_rcv": 0.88, "pct_prep": 81.03932584269663, "pct_dct": 6.6011235955056184, "pct_rcv": 12.359550561797754, "uph_prep": 84.57, "units_perdues": 114}, "207399445": {"name": "Neki,Maylis", "h_prep": 3.54, "h_dct": 0.05, "h_rcv": 1.82, "pct_prep": 65.4343807763401, "pct_dct": 0.9242144177449169, "pct_rcv": 33.64140480591497, "uph_prep": 116.79, "units_perdues": 218}, "207399485": {"name": "Dada,Lisiane", "h_prep": 5.5, "h_dct": 0.66, "h_rcv": 0.8999999999999999, "pct_prep": 77.90368271954674, "pct_dct": 9.34844192634561, "pct_rcv": 12.747875354107647, "uph_prep": 107.39, "units_perdues": 167}, "207436868": {"name": "Samar,Serina", "h_prep": 2.54, "h_dct": 0.48, "h_rcv": 3.94, "pct_prep": 36.49425287356322, "pct_dct": 6.896551724137931, "pct_rcv": 56.60919540229885, "uph_prep": 95.99, "units_perdues": 424}, "207436889": {"name": "Fenni,Loubna", "h_prep": 0.28, "h_dct": 0, "h_rcv": 0.53, "pct_prep": 34.567901234567906, "pct_dct": 0.0, "pct_rcv": 65.4320987654321, "uph_prep": 105.57, "units_perdues": 55}, "207436893": {"name": "Yousuf,Shayan", "h_prep": 2.69, "h_dct": 0.75, "h_rcv": 3.34, "pct_prep": 39.6755162241888, "pct_dct": 11.061946902654867, "pct_rcv": 49.26253687315634, "uph_prep": 92.87, "units_perdues": 379}, "207638736": {"name": "Blanchard,Loic", "h_prep": 0.43, "h_dct": 0, "h_rcv": 0.08, "pct_prep": 84.31372549019608, "pct_dct": 0.0, "pct_rcv": 15.686274509803921, "uph_prep": 35.27, "units_perdues": 2}};
-var c=document.getElementById('hC');var x=c.getContext('2d');c.width=c.parentElement.offsetWidth;c.height=100;
-if(H.length>1){var p=H.map(function(e){return e.global_uph});var mx=Math.max.apply(null,p)+12;var mn=Math.min.apply(null,p)-12;var w=c.width-70;var h=c.height-30;x.strokeStyle='#2d4050';x.lineWidth=1;for(var g=0;g<3;g++){var gy=15+(h/2)*g;x.beginPath();x.moveTo(45,gy);x.lineTo(c.width-15,gy);x.stroke();x.fillStyle='#667';x.font='10px sans-serif';x.fillText((mx-(mx-mn)*g/2).toFixed(0),5,gy+3)}x.strokeStyle='#ff9900';x.lineWidth=3;x.beginPath();p.forEach(function(v,i){var px=55+(w/(p.length-1))*i;var py=15+h-((v-mn)/(mx-mn))*h;if(i===0)x.moveTo(px,py);else x.lineTo(px,py)});x.stroke();p.forEach(function(v,i){var px=55+(w/(p.length-1))*i;var py=15+h-((v-mn)/(mx-mn))*h;x.fillStyle='#ff9900';x.beginPath();x.arc(px,py,5,0,Math.PI*2);x.fill();x.fillStyle='#e8eaed';x.font='bold 10px sans-serif';x.fillText(v.toFixed(0),px-10,py-8);x.fillStyle='#667';x.font='9px sans-serif';x.fillText(H[i].timestamp,px-12,c.height-3)})}
-function showDetail(id){var d=AD[id];if(!d)return;document.getElementById('mT').textContent=d.name;document.getElementById('dG').innerHTML='<div class="detail-item"><div class="val">'+d.h_prep.toFixed(2)+'h</div><div class="lbl">PREP</div></div><div class="detail-item"><div class="val blue">'+d.h_dct.toFixed(2)+'h</div><div class="lbl">DCT</div></div><div class="detail-item"><div class="val green">'+d.h_rcv.toFixed(2)+'h</div><div class="lbl">RCV</div></div><div class="detail-item"><div class="val">'+d.pct_prep.toFixed(0)+'%</div><div class="lbl">%P</div></div><div class="detail-item"><div class="val blue">'+d.pct_dct.toFixed(0)+'%</div><div class="lbl">%D</div></div><div class="detail-item"><div class="val green">'+d.pct_rcv.toFixed(0)+'%</div><div class="lbl">%R</div></div>';document.getElementById('dB').innerHTML='<div style="width:'+d.pct_prep+'%;background:#ff9900;display:flex;align-items:center;justify-content:center;font-size:0.68em;font-weight:600;color:#fff">'+(d.pct_prep>10?d.pct_prep.toFixed(0)+'%':'')+'</div><div style="width:'+d.pct_dct+'%;background:#42a5f5;display:flex;align-items:center;justify-content:center;font-size:0.68em;font-weight:600;color:#fff">'+(d.pct_dct>10?d.pct_dct.toFixed(0)+'%':'')+'</div><div style="width:'+d.pct_rcv+'%;background:#66bb6a;display:flex;align-items:center;justify-content:center;font-size:0.68em;font-weight:600;color:#fff">'+(d.pct_rcv>10?d.pct_rcv.toFixed(0)+'%':'')+'</div>';document.getElementById('lD').innerHTML='<div style="text-align:center;padding:6px"><div style="font-size:0.82em;color:#8899aa">('+d.h_dct.toFixed(2)+'h DCT + '+d.h_rcv.toFixed(2)+'h RCV) × '+d.uph_prep.toFixed(0)+' UPH</div><div style="font-size:1.3em;font-weight:700;color:#ef5350;margin:4px 0">'+d.units_perdues+' units perdues</div></div>';var data=AH[id];var tb=document.getElementById('mB');tb.innerHTML='';if(data){data.forEach(function(e,i){var t='--';if(i>0){var df=e.uph-data[i-1].uph;t=df>5?'<span class="trend-up">&#9650;+'+df.toFixed(0)+'</span>':df<-5?'<span class="trend-down">&#9660;'+df.toFixed(0)+'</span>':'<span class="trend-flat">'+((df>=0?'+':'')+df.toFixed(0))+'</span>'}tb.innerHTML+='<tr><td><b>'+e.ts+'</b></td><td style="font-weight:600;color:#ff9900">'+e.uph.toFixed(0)+'</td><td>'+t+'</td></tr>'})}var ac=document.getElementById('aC');var ax=ac.getContext('2d');ac.width=460;ac.height=90;ax.clearRect(0,0,460,90);if(data&&data.length>1){var pts=data.map(function(e){return e.uph});var m2=Math.max.apply(null,pts)+15;var n2=Math.min.apply(null,pts)-15;ax.strokeStyle='#ff9900';ax.lineWidth=3;ax.beginPath();pts.forEach(function(v,i){var px=25+(410/(pts.length-1))*i;var py=10+60-((v-n2)/(m2-n2))*60;if(i===0)ax.moveTo(px,py);else ax.lineTo(px,py)});ax.stroke();pts.forEach(function(v,i){var px=25+(410/(pts.length-1))*i;var py=10+60-((v-n2)/(m2-n2))*60;ax.fillStyle='#ff9900';ax.beginPath();ax.arc(px,py,4,0,Math.PI*2);ax.fill();ax.fillStyle='#e8eaed';ax.font='bold 10px sans-serif';ax.fillText(v.toFixed(0),px-8,py-7);ax.fillStyle='#667';ax.font='8px sans-serif';ax.fillText(data[i].ts,px-10,85)})}document.getElementById('mO').classList.add('active')}
+var AD={"109911539": {"name": "Bouillon,Marie Christine", "h_prep": 1.47, "h_dct": 0.0, "h_rcv": 0.11, "pct_prep": 93.0379746835443, "pct_dct": 0.0, "pct_rcv": 6.962025316455696, "uph_prep": 125.0, "units_perdues": 13}, "112702178": {"name": "TOTE GB\u00c9L\u00c9,Jeanine Ella", "h_prep": 1.18, "h_dct": 0.17, "h_rcv": 0.22999999999999998, "pct_prep": 74.68354430379746, "pct_dct": 10.759493670886078, "pct_rcv": 14.556962025316455, "uph_prep": 148.27, "units_perdues": 59}, "112871277": {"name": "Keita,Marie Claire", "h_prep": 1.52, "h_dct": 0.0, "h_rcv": 0.06, "pct_prep": 96.20253164556962, "pct_dct": 0.0, "pct_rcv": 3.797468354430379, "uph_prep": 213.0, "units_perdues": 12}, "200302287": {"name": "Duburcq,Fabrice", "h_prep": 1.22, "h_dct": 0.15, "h_rcv": 0.2, "pct_prep": 77.70700636942675, "pct_dct": 9.554140127388536, "pct_rcv": 12.738853503184716, "uph_prep": 235.19, "units_perdues": 82}, "200708239": {"name": "Mangara,Makoroba", "h_prep": 1.48, "h_dct": 0.02, "h_rcv": 0.08, "pct_prep": 93.67088607594937, "pct_dct": 1.2658227848101267, "pct_rcv": 5.063291139240507, "uph_prep": 134.04, "units_perdues": 13}, "201221850": {"name": "Wallez,Philippe", "h_prep": 1.13, "h_dct": 0.02, "h_rcv": 0.43, "pct_prep": 71.51898734177216, "pct_dct": 1.2658227848101267, "pct_rcv": 27.21518987341772, "uph_prep": 177.7, "units_perdues": 79}, "203227835": {"name": "PIERRET,C\u00e9cile", "h_prep": 1.27, "h_dct": 0.04, "h_rcv": 0.27, "pct_prep": 80.37974683544303, "pct_dct": 2.5316455696202533, "pct_rcv": 17.088607594936708, "uph_prep": 178.07, "units_perdues": 55}, "204238020": {"name": "Kantiono,Sandrine", "h_prep": 1.11, "h_dct": 0.0, "h_rcv": 0.47, "pct_prep": 70.25316455696203, "pct_dct": 0.0, "pct_rcv": 29.746835443037973, "uph_prep": 338.4, "units_perdues": 159}, "205168778": {"name": "Chahid,Rachid", "h_prep": 1.32, "h_dct": 0.04, "h_rcv": 0.22, "pct_prep": 83.54430379746836, "pct_dct": 2.5316455696202533, "pct_rcv": 13.924050632911392, "uph_prep": 113.54, "units_perdues": 29}, "206184908": {"name": "Dessaint,Karim", "h_prep": 0.24, "h_dct": 1.03, "h_rcv": 0, "pct_prep": 18.89763779527559, "pct_dct": 81.10236220472441, "pct_rcv": 0.0, "uph_prep": 20.91, "units_perdues": 21}, "207316709": {"name": "Seck,Sadio sophie", "h_prep": 0.01, "h_dct": 1.38, "h_rcv": 0.19, "pct_prep": 0.6329113924050633, "pct_dct": 87.34177215189874, "pct_rcv": 12.025316455696204, "uph_prep": 939.13, "units_perdues": 1474}, "207399397": {"name": "Houssene,Hassanaty", "h_prep": 0.74, "h_dct": 0.07, "h_rcv": 0.77, "pct_prep": 46.835443037974684, "pct_dct": 4.430379746835443, "pct_rcv": 48.734177215189874, "uph_prep": 109.83, "units_perdues": 92}, "207399444": {"name": "Daniel,Orlane", "h_prep": 1.36, "h_dct": 0.09, "h_rcv": 0.13, "pct_prep": 86.07594936708861, "pct_dct": 5.69620253164557, "pct_rcv": 8.227848101265822, "uph_prep": 102.88, "units_perdues": 22}, "207399485": {"name": "Dada,Lisiane", "h_prep": 1.31, "h_dct": 0, "h_rcv": 0.27, "pct_prep": 82.91139240506328, "pct_dct": 0.0, "pct_rcv": 17.088607594936708, "uph_prep": 219.74, "units_perdues": 59}, "207436868": {"name": "Samar,Serina", "h_prep": 0.25, "h_dct": 0.77, "h_rcv": 0, "pct_prep": 24.509803921568626, "pct_dct": 75.49019607843137, "pct_rcv": 0.0, "uph_prep": 15.74, "units_perdues": 12}};
+function showDetail(id){var d=AD[id];if(!d)return;document.getElementById('mT').textContent=d.name;document.getElementById('dG').innerHTML='<div class="detail-item"><div class="val">'+d.h_prep.toFixed(2)+'h</div><div class="lbl">PREP</div></div><div class="detail-item"><div class="val blue">'+d.h_dct.toFixed(2)+'h</div><div class="lbl">DCT</div></div><div class="detail-item"><div class="val green">'+d.h_rcv.toFixed(2)+'h</div><div class="lbl">RCV</div></div><div class="detail-item"><div class="val">'+d.pct_prep.toFixed(0)+'%</div><div class="lbl">%P</div></div><div class="detail-item"><div class="val blue">'+d.pct_dct.toFixed(0)+'%</div><div class="lbl">%D</div></div><div class="detail-item"><div class="val green">'+d.pct_rcv.toFixed(0)+'%</div><div class="lbl">%R</div></div>';document.getElementById('dB').innerHTML='<div style="width:'+d.pct_prep+'%;background:#ff9900;display:flex;align-items:center;justify-content:center;font-size:0.68em;font-weight:600;color:#fff">'+(d.pct_prep>10?d.pct_prep.toFixed(0)+'%':'')+'</div><div style="width:'+d.pct_dct+'%;background:#42a5f5;display:flex;align-items:center;justify-content:center;font-size:0.68em;font-weight:600;color:#fff">'+(d.pct_dct>10?d.pct_dct.toFixed(0)+'%':'')+'</div><div style="width:'+d.pct_rcv+'%;background:#66bb6a;display:flex;align-items:center;justify-content:center;font-size:0.68em;font-weight:600;color:#fff">'+(d.pct_rcv>10?d.pct_rcv.toFixed(0)+'%':'')+'</div>';document.getElementById('lD').innerHTML='<div style="text-align:center;padding:6px"><div style="font-size:0.82em;color:#8899aa">('+d.h_dct.toFixed(2)+'h DCT + '+d.h_rcv.toFixed(2)+'h RCV) × '+d.uph_prep.toFixed(0)+' UPH</div><div style="font-size:1.3em;font-weight:700;color:#ef5350;margin:4px 0">'+d.units_perdues+' units perdues</div></div>';document.getElementById('mO').classList.add('active')}
 function cM(e){if(e.target===document.getElementById('mO'))document.getElementById('mO').classList.remove('active')}
 var ms=[...new Set([...document.querySelectorAll('[data-manager]')].map(r=>r.dataset.manager))].sort();var sel=document.getElementById('fM');ms.forEach(m=>{var o=document.createElement('option');o.value=m;o.textContent=m;sel.appendChild(o)});
 function fT(){var s=document.getElementById('search').value.toLowerCase();var m=document.getElementById('fM').value;var t=document.getElementById('fType').value;document.querySelectorAll('#dT tbody tr').forEach(r=>{r.style.display=(!s||r.dataset.name.includes(s)||r.dataset.id.includes(s)||r.dataset.manager.toLowerCase().includes(s))&&(!m||r.dataset.manager===m)&&(!t||r.dataset.type===t)?'':'none'})}
