@@ -4,380 +4,116 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f1923;color:#e8eaed;padding:20px}.header{text-align:center;margin-bottom:20px}.header h1{font-size:1.5em;color:#42a5f5;margin-bottom:4px}.header .subtitle{color:#8899aa;font-size:0.85em}.badge{display:inline-block;background:#1a2733;border:1px solid #2d4050;border-radius:12px;padding:3px 10px;font-size:0.75em;color:#66bb6a;margin-top:6px}.kpis{display:flex;gap:12px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}.kpi{background:#1a2733;border:1px solid #2d4050;border-radius:12px;padding:12px 18px;text-align:center;min-width:120px}.kpi .value{font-size:1.6em;font-weight:700;color:#42a5f5}.kpi .label{font-size:0.7em;color:#8899aa;margin-top:3px}.kpi .value.green{color:#66bb6a}.controls{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}.controls input,.controls select{background:#1a2733;border:1px solid #2d4050;border-radius:8px;padding:7px 10px;color:#e8eaed;font-size:0.82em}.controls input{flex:1;min-width:180px}.controls select{min-width:130px}.table-wrap{overflow-x:auto;border-radius:12px;border:1px solid #2d4050}table{width:100%;border-collapse:collapse;font-size:0.8em}thead{background:#1a2733;position:sticky;top:0}th{padding:8px 6px;text-align:left;color:#42a5f5;font-weight:600;border-bottom:2px solid #2d4050;white-space:nowrap}td{padding:7px 6px;border-bottom:1px solid #1a2733}tr:hover{background:#1a2733}.num{text-align:right;font-variant-numeric:tabular-nums}.bar-cell{min-width:90px}.bar{height:18px;border-radius:4px;display:flex;overflow:hidden}.bar-dct{background:#42a5f5}.bar-rcv{background:#66bb6a}.type-badge{display:inline-block;padding:2px 5px;border-radius:4px;font-size:0.72em;font-weight:600}.type-AMZN{background:#ff990033;color:#ff9900}.type-3PTY{background:#42a5f533;color:#42a5f5}.legend{display:flex;gap:14px;justify-content:center;margin-bottom:12px;font-size:0.78em}.legend-item{display:flex;align-items:center;gap:4px}.legend-dot{width:10px;height:10px;border-radius:3px}
 </style></head><body>
-<div class="header"><h1>📦 CDG7 Night DCT/RCV Tracker</h1><div class="subtitle">Nuit du 10/07 au 11/07/2026 — Shift 21h30 - 05h00</div><div class="badge">✅ MAJ 04h55 CEST</div></div>
-<div class="kpis"><div class="kpi"><div class="value">112</div><div class="label">Associés</div></div><div class="kpi"><div class="value">105.5h</div><div class="label">H.Decant</div></div><div class="kpi"><div class="value">361</div><div class="label">UPH DCT</div></div><div class="kpi"><div class="value green">33.5h</div><div class="label">H.Receive</div></div><div class="kpi"><div class="value green">273</div><div class="label">UPH RCV</div></div></div>
+<div class="header"><h1>📦 CDG7 Night DCT/RCV Tracker</h1><div class="subtitle">Nuit du 10/07 au 11/07/2026 — Shift 21h30 - 05h00</div><div class="badge">✅ MAJ 05h00 CEST</div></div>
+<div class="kpis"><div class="kpi"><div class="value">92</div><div class="label">Associés</div></div><div class="kpi"><div class="value">93.9h</div><div class="label">H.Decant</div></div><div class="kpi"><div class="value">446</div><div class="label">UPH DCT</div></div><div class="kpi"><div class="value green">10.0h</div><div class="label">H.Receive</div></div><div class="kpi"><div class="value green">442</div><div class="label">UPH RCV</div></div></div>
 <div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#42a5f5"></div>Decant</div><div class="legend-item"><div class="legend-dot" style="background:#66bb6a"></div>Receive</div></div>
 <div class="controls"><input type="text" id="search" placeholder="🔍 Recherche..." oninput="fT()"><select id="fM" onchange="fT()"><option value="">Tous mgr</option></select><select id="fType" onchange="fT()"><option value="">Tous</option><option value="AMZN">AMZN</option><option value="3PTY">3PTY</option></select></div>
 <div class="table-wrap"><table id="dT"><thead><tr><th>Nom</th><th>Mgr</th><th>Type</th><th class="num">H.DCT</th><th class="num">UPH.D</th><th class="num">H.RCV</th><th class="num">UPH.R</th><th class="num">H.Tot</th><th class="num">%D</th><th class="num">%R</th><th class="bar-cell">Rep.</th></tr></thead><tbody>
-<tr data-name="muamba odia,dhydhy" data-manager="DARIF,Zakaria" data-type="AMZN">
-<td>MUAMBA ODIA,Dhydhy</td>
-<td>DARIF</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.24</td>
-<td class="num" style="font-weight:600">654</td>
-<td class="num">0.35</td>
-<td class="num" style="font-weight:600">591</td>
-<td class="num">1.59</td>
-<td class="num">78%</td>
-<td class="num">22%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:78%"></div><div class="bar-rcv" style="width:22%"></div></div></td>
-</tr><tr data-name="jeune,joshua" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Jeune,Joshua</td>
+<tr data-name="amdaoud,mounia" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Amdaoud,Mounia</td>
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.59</td>
-<td class="num" style="font-weight:600">47</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.59</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="hodin,tyffaine" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Hodin,Tyffaine</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.10</td>
-<td class="num" style="font-weight:600">413</td>
-<td class="num">0.49</td>
-<td class="num" style="font-weight:600">2</td>
-<td class="num">1.59</td>
-<td class="num">69%</td>
-<td class="num">31%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:69%"></div><div class="bar-rcv" style="width:31%"></div></div></td>
-</tr><tr data-name="oturak,selin" data-manager="LAMACHI,IMANE" data-type="AMZN">
-<td>Oturak,Selin</td>
-<td>LAMACHI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.73</td>
-<td class="num" style="font-weight:600">555</td>
-<td class="num">0.86</td>
-<td class="num" style="font-weight:600">52</td>
-<td class="num">1.59</td>
-<td class="num">46%</td>
-<td class="num">54%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:46%"></div><div class="bar-rcv" style="width:54%"></div></div></td>
-</tr><tr data-name="matondo,marc" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Matondo,Marc</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.56</td>
-<td class="num" style="font-weight:600">154</td>
-<td class="num">1.02</td>
-<td class="num" style="font-weight:600">143</td>
-<td class="num">1.58</td>
-<td class="num">35%</td>
-<td class="num">65%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:35%"></div><div class="bar-rcv" style="width:65%"></div></div></td>
-</tr><tr data-name="haidara,ismael" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Haidara,Ismael</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.92</td>
-<td class="num" style="font-weight:600">589</td>
-<td class="num">0.66</td>
-<td class="num" style="font-weight:600">92</td>
-<td class="num">1.58</td>
-<td class="num">58%</td>
-<td class="num">42%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:58%"></div><div class="bar-rcv" style="width:42%"></div></div></td>
-</tr><tr data-name="berniere,gwenaelle" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Berniere,Gwenaelle</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.63</td>
-<td class="num" style="font-weight:600">232</td>
-<td class="num">0.95</td>
-<td class="num" style="font-weight:600">92</td>
-<td class="num">1.58</td>
-<td class="num">40%</td>
-<td class="num">60%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:40%"></div><div class="bar-rcv" style="width:60%"></div></div></td>
-</tr><tr data-name="sylla,nahoua" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Sylla,Nahoua</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.20</td>
-<td class="num" style="font-weight:600">358</td>
-<td class="num">0.38</td>
-<td class="num" style="font-weight:600">263</td>
-<td class="num">1.58</td>
-<td class="num">76%</td>
-<td class="num">24%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:76%"></div><div class="bar-rcv" style="width:24%"></div></div></td>
-</tr><tr data-name="bouabdallah,abderahim" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Bouabdallah,Abderahim</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.49</td>
-<td class="num" style="font-weight:600">82</td>
-<td class="num">0.09</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">94%</td>
-<td class="num">6%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:94%"></div><div class="bar-rcv" style="width:6%"></div></div></td>
-</tr><tr data-name="saidi,ziad" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Saidi,Ziad</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.55</td>
-<td class="num" style="font-weight:600">692</td>
-<td class="num">0.03</td>
-<td class="num" style="font-weight:600">300</td>
-<td class="num">1.58</td>
-<td class="num">98%</td>
-<td class="num">2%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:98%"></div><div class="bar-rcv" style="width:2%"></div></div></td>
-</tr><tr data-name="thevenin,ophelie" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Thevenin,Ophelie</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.35</td>
-<td class="num" style="font-weight:600">379</td>
-<td class="num">0.23</td>
+<td class="num">0.30</td>
+<td class="num" style="font-weight:600">987</td>
+<td class="num">1.52</td>
 <td class="num" style="font-weight:600">548</td>
-<td class="num">1.58</td>
-<td class="num">85%</td>
-<td class="num">15%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:85%"></div><div class="bar-rcv" style="width:15%"></div></div></td>
-</tr><tr data-name="genc,mahir" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Genc,Mahir</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="jounah,youssra" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Jounah,Youssra</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="kiakondo nkazi,armand" data-manager="BADI,Aicha" data-type="AMZN">
-<td>KIAKONDO NKAZI,ARMAND</td>
-<td>BADI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.26</td>
-<td class="num" style="font-weight:600">208</td>
-<td class="num">0.32</td>
-<td class="num" style="font-weight:600">106</td>
-<td class="num">1.58</td>
-<td class="num">80%</td>
-<td class="num">20%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:80%"></div><div class="bar-rcv" style="width:20%"></div></div></td>
-</tr><tr data-name="cetinkaya,emrullah" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Cetinkaya,Emrullah</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.33</td>
-<td class="num" style="font-weight:600">256</td>
-<td class="num">0.25</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">84%</td>
+<td class="num">1.82</td>
 <td class="num">16%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:84%"></div><div class="bar-rcv" style="width:16%"></div></div></td>
-</tr><tr data-name="diallo,adjidiatou" data-manager="DARIF,Zakaria" data-type="3PTY">
-<td>Diallo,Adjidiatou</td>
-<td>DARIF</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.05</td>
-<td class="num" style="font-weight:600">341</td>
-<td class="num">0.53</td>
-<td class="num" style="font-weight:600">49</td>
-<td class="num">1.58</td>
-<td class="num">66%</td>
-<td class="num">34%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:66%"></div><div class="bar-rcv" style="width:34%"></div></div></td>
-</tr><tr data-name="besofi bokoli,joseph" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Besofi Bokoli,Joseph</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">361</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="pereira da costa,lucia" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Pereira Da Costa,Lucia</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.73</td>
-<td class="num" style="font-weight:600">1685</td>
-<td class="num">0.85</td>
-<td class="num" style="font-weight:600">594</td>
-<td class="num">1.58</td>
-<td class="num">46%</td>
-<td class="num">54%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:46%"></div><div class="bar-rcv" style="width:54%"></div></div></td>
-</tr><tr data-name="benhebiche,lyna" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Benhebiche,Lyna</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.36</td>
-<td class="num" style="font-weight:600">115</td>
-<td class="num">0.22</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">86%</td>
-<td class="num">14%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:86%"></div><div class="bar-rcv" style="width:14%"></div></div></td>
-</tr><tr data-name="wassa,laetitia" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Wassa,Laetitia</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.29</td>
-<td class="num" style="font-weight:600">465</td>
-<td class="num">0.29</td>
-<td class="num" style="font-weight:600">93</td>
-<td class="num">1.58</td>
-<td class="num">82%</td>
-<td class="num">18%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:82%"></div><div class="bar-rcv" style="width:18%"></div></div></td>
-</tr><tr data-name="idriss mohammed,jamal" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Idriss Mohammed,Jamal</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.97</td>
-<td class="num" style="font-weight:600">165</td>
-<td class="num">0.61</td>
-<td class="num" style="font-weight:600">39</td>
-<td class="num">1.58</td>
-<td class="num">61%</td>
-<td class="num">39%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:61%"></div><div class="bar-rcv" style="width:39%"></div></div></td>
-</tr><tr data-name="yattabary,seydou" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Yattabary,Seydou</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="cabriolle,jeremy" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Cabriolle,Jeremy</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">209</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="guei,ninsemou" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Guei,Ninsemou</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.62</td>
-<td class="num" style="font-weight:600">310</td>
-<td class="num">0.96</td>
-<td class="num" style="font-weight:600">123</td>
-<td class="num">1.58</td>
-<td class="num">39%</td>
-<td class="num">61%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:39%"></div><div class="bar-rcv" style="width:61%"></div></div></td>
-</tr><tr data-name="sebiane,fethi" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Sebiane,Fethi</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.14</td>
-<td class="num" style="font-weight:600">200</td>
-<td class="num">0.44</td>
-<td class="num" style="font-weight:600">207</td>
-<td class="num">1.58</td>
-<td class="num">72%</td>
-<td class="num">28%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:72%"></div><div class="bar-rcv" style="width:28%"></div></div></td>
-</tr><tr data-name="wideham,kendra" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Wideham,Kendra</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">25</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="saglam,emre" data-manager="MARDI,Yassir" data-type="AMZN">
-<td>Saglam,Emre</td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="gouttih,assia" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Gouttih,Assia</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.27</td>
-<td class="num" style="font-weight:600">317</td>
-<td class="num">0.31</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">80%</td>
-<td class="num">20%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:80%"></div><div class="bar-rcv" style="width:20%"></div></div></td>
-</tr><tr data-name="zotchi,oreyane" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Zotchi,Oreyane</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">96</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+<td class="num">84%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:16%"></div><div class="bar-rcv" style="width:84%"></div></div></td>
 </tr><tr data-name="kouakou ep kouyate,affoue germaine" data-manager="BADI,Aicha" data-type="AMZN">
 <td>Kouakou ep Kouyate,Affoue germaine</td>
 <td>BADI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.52</td>
-<td class="num" style="font-weight:600">460</td>
-<td class="num">1.06</td>
-<td class="num" style="font-weight:600">860</td>
-<td class="num">1.58</td>
-<td class="num">33%</td>
-<td class="num">67%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:33%"></div><div class="bar-rcv" style="width:67%"></div></div></td>
-</tr><tr data-name="cetin,elif" data-manager="BADI,Aicha" data-type="AMZN">
-<td>Cetin,Elif</td>
-<td>BADI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">0</td>
+<td class="num">0.50</td>
+<td class="num" style="font-weight:600">549</td>
+<td class="num">1.30</td>
+<td class="num" style="font-weight:600">744</td>
+<td class="num">1.80</td>
+<td class="num">28%</td>
+<td class="num">72%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:28%"></div><div class="bar-rcv" style="width:72%"></div></div></td>
+</tr><tr data-name="cabriolle,jeremy" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Cabriolle,Jeremy</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.79</td>
+<td class="num" style="font-weight:600">185</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
+<td class="num">1.79</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="besofi bokoli,joseph" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Besofi Bokoli,Joseph</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.78</td>
+<td class="num" style="font-weight:600">335</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.78</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="saidi,ziad" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Saidi,Ziad</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.76</td>
+<td class="num" style="font-weight:600">610</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.76</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="zotchi,oreyane" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Zotchi,Oreyane</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.75</td>
+<td class="num" style="font-weight:600">114</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.75</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="edongo ambembe,serge" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Edongo Ambembe,Serge</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.75</td>
+<td class="num" style="font-weight:600">193</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.75</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="thevenin,ophelie" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Thevenin,Ophelie</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.61</td>
+<td class="num" style="font-weight:600">358</td>
+<td class="num">0.11</td>
+<td class="num" style="font-weight:600">1128</td>
+<td class="num">1.72</td>
+<td class="num">94%</td>
+<td class="num">6%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:94%"></div><div class="bar-rcv" style="width:6%"></div></div></td>
+</tr><tr data-name="bouabdallah,abderahim" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Bouabdallah,Abderahim</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.70</td>
+<td class="num" style="font-weight:600">72</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.70</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
@@ -385,179 +121,227 @@
 <td>Brunet,Graciella</td>
 <td>MARDI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.48</td>
-<td class="num" style="font-weight:600">273</td>
-<td class="num">1.10</td>
-<td class="num" style="font-weight:600">542</td>
-<td class="num">1.58</td>
-<td class="num">30%</td>
-<td class="num">70%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:30%"></div><div class="bar-rcv" style="width:70%"></div></div></td>
-</tr><tr data-name="marlu,steven" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Marlu,Steven</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="kartal,erdal" data-manager="MARDI,Yassir" data-type="3PTY">
-<td>Kartal,Erdal</td>
-<td>MARDI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.22</td>
-<td class="num" style="font-weight:600">275</td>
-<td class="num">0.36</td>
-<td class="num" style="font-weight:600">567</td>
-<td class="num">1.58</td>
-<td class="num">77%</td>
-<td class="num">23%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:77%"></div><div class="bar-rcv" style="width:23%"></div></div></td>
-</tr><tr data-name="edongo ambembe,serge" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Edongo Ambembe,Serge</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.54</td>
-<td class="num" style="font-weight:600">219</td>
-<td class="num">0.04</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">97%</td>
-<td class="num">3%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:97%"></div><div class="bar-rcv" style="width:3%"></div></div></td>
-</tr><tr data-name="bikoumou ngoma,etchel magalie" data-manager="Arahal,Anas" data-type="AMZN">
-<td>Bikoumou Ngoma,Etchel Magalie</td>
-<td>Arahal</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.45</td>
-<td class="num" style="font-weight:600">654</td>
-<td class="num">0.13</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">92%</td>
-<td class="num">8%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:92%"></div><div class="bar-rcv" style="width:8%"></div></div></td>
-</tr><tr data-name="hanesse,ambre" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Hanesse,Ambre</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="kheriji,amine" data-manager="BELHADJ,Abdelkader" data-type="3PTY">
-<td>Kheriji,Amine</td>
-<td>BELHADJ</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.09</td>
-<td class="num" style="font-weight:600">794</td>
-<td class="num">0.49</td>
-<td class="num" style="font-weight:600">345</td>
-<td class="num">1.58</td>
-<td class="num">69%</td>
-<td class="num">31%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:69%"></div><div class="bar-rcv" style="width:31%"></div></div></td>
-</tr><tr data-name="turedu,oguzhan" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Turedu,Oguzhan</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.33</td>
-<td class="num" style="font-weight:600">560</td>
-<td class="num">0.25</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">84%</td>
-<td class="num">16%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:84%"></div><div class="bar-rcv" style="width:16%"></div></div></td>
+<td class="num">0.70</td>
+<td class="num" style="font-weight:600">277</td>
+<td class="num">0.98</td>
+<td class="num" style="font-weight:600">551</td>
+<td class="num">1.68</td>
+<td class="num">42%</td>
+<td class="num">58%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:42%"></div><div class="bar-rcv" style="width:58%"></div></div></td>
 </tr><tr data-name="bouziane,lina" data-manager="Sfaxi,Emna" data-type="3PTY">
 <td>Bouziane,Lina</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.45</td>
-<td class="num" style="font-weight:600">343</td>
-<td class="num">0.13</td>
+<td class="num">1.66</td>
+<td class="num" style="font-weight:600">300</td>
+<td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">92%</td>
-<td class="num">8%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:92%"></div><div class="bar-rcv" style="width:8%"></div></div></td>
-</tr><tr data-name="tchikaya,jade tchikaya" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>tchikaya,jade tchikaya</td>
+<td class="num">1.66</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="bikoumou ngoma,etchel magalie" data-manager="Arahal,Anas" data-type="AMZN">
+<td>Bikoumou Ngoma,Etchel Magalie</td>
+<td>Arahal</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.65</td>
+<td class="num" style="font-weight:600">746</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.65</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="attoumani,nourah" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>ATTOUMANI,Nourah</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.29</td>
-<td class="num" style="font-weight:600">244</td>
-<td class="num">0.29</td>
+<td class="num">1.64</td>
+<td class="num" style="font-weight:600">237</td>
+<td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">82%</td>
-<td class="num">18%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:82%"></div><div class="bar-rcv" style="width:18%"></div></div></td>
-</tr><tr data-name="gonzalez,gerald" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Gonzalez,Gerald</td>
+<td class="num">1.64</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="gappu,noella" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Gappu,Noella</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.82</td>
-<td class="num" style="font-weight:600">606</td>
-<td class="num">0.76</td>
-<td class="num" style="font-weight:600">257</td>
+<td class="num">1.63</td>
+<td class="num" style="font-weight:600">256</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.63</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="sylla,nahoua" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Sylla,Nahoua</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.41</td>
+<td class="num" style="font-weight:600">317</td>
+<td class="num">0.17</td>
+<td class="num" style="font-weight:600">346</td>
 <td class="num">1.58</td>
-<td class="num">52%</td>
-<td class="num">48%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:52%"></div><div class="bar-rcv" style="width:48%"></div></div></td>
+<td class="num">89%</td>
+<td class="num">11%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:89%"></div><div class="bar-rcv" style="width:11%"></div></div></td>
+</tr><tr data-name="wassa,laetitia" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Wassa,Laetitia</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.50</td>
+<td class="num" style="font-weight:600">432</td>
+<td class="num">0.07</td>
+<td class="num" style="font-weight:600">43</td>
+<td class="num">1.57</td>
+<td class="num">96%</td>
+<td class="num">4%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:96%"></div><div class="bar-rcv" style="width:4%"></div></div></td>
 </tr><tr data-name="rahimi,hajar" data-manager="Sfaxi,Emna" data-type="3PTY">
 <td>Rahimi,Hajar</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.36</td>
-<td class="num" style="font-weight:600">213</td>
-<td class="num">0.22</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">86%</td>
-<td class="num">14%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:86%"></div><div class="bar-rcv" style="width:14%"></div></div></td>
-</tr><tr data-name="kante,assa" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Kante,Assa</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.10</td>
-<td class="num" style="font-weight:600">790</td>
-<td class="num">1.48</td>
-<td class="num" style="font-weight:600">555</td>
-<td class="num">1.58</td>
-<td class="num">6%</td>
-<td class="num">94%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:6%"></div><div class="bar-rcv" style="width:94%"></div></div></td>
-</tr><tr data-name="bacakli,mehmet" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Bacakli,Mehmet</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">0</td>
+<td class="num">1.57</td>
+<td class="num" style="font-weight:600">185</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
+<td class="num">1.57</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="dogan,mustafa" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Dogan,Mustafa</td>
+</tr><tr data-name="benhebiche,lyna" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Benhebiche,Lyna</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">87</td>
+<td class="num">1.56</td>
+<td class="num" style="font-weight:600">104</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
+<td class="num">1.56</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="kiakondo nkazi,armand" data-manager="BADI,Aicha" data-type="AMZN">
+<td>KIAKONDO NKAZI,ARMAND</td>
+<td>BADI</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.38</td>
+<td class="num" style="font-weight:600">207</td>
+<td class="num">0.18</td>
+<td class="num" style="font-weight:600">78</td>
+<td class="num">1.56</td>
+<td class="num">88%</td>
+<td class="num">12%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:88%"></div><div class="bar-rcv" style="width:12%"></div></div></td>
+</tr><tr data-name="berniere,gwenaelle" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Berniere,Gwenaelle</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.83</td>
+<td class="num" style="font-weight:600">252</td>
+<td class="num">0.72</td>
+<td class="num" style="font-weight:600">107</td>
+<td class="num">1.55</td>
+<td class="num">54%</td>
+<td class="num">46%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:54%"></div><div class="bar-rcv" style="width:46%"></div></div></td>
+</tr><tr data-name="ahmed ben lahssen,chrystelle sylvie" data-manager="Sfaxi,Emna" data-type="AMZN">
+<td>AHMED BEN LAHSSEN,Chrystelle Sylvie</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.50</td>
+<td class="num" style="font-weight:600">247</td>
+<td class="num">0.03</td>
+<td class="num" style="font-weight:600">655</td>
+<td class="num">1.53</td>
+<td class="num">98%</td>
+<td class="num">2%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:98%"></div><div class="bar-rcv" style="width:2%"></div></div></td>
+</tr><tr data-name="cetinkaya,emrullah" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Cetinkaya,Emrullah</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.53</td>
+<td class="num" style="font-weight:600">242</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.53</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="seck,sadio sophie" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Seck,Sadio sophie</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.52</td>
+<td class="num" style="font-weight:600">575</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.52</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="sebiane,fethi" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Sebiane,Fethi</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.25</td>
+<td class="num" style="font-weight:600">201</td>
+<td class="num">0.27</td>
+<td class="num" style="font-weight:600">332</td>
+<td class="num">1.52</td>
+<td class="num">82%</td>
+<td class="num">18%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:82%"></div><div class="bar-rcv" style="width:18%"></div></div></td>
+</tr><tr data-name="pedro,divine" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Pedro,Divine</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.52</td>
+<td class="num" style="font-weight:600">259</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.52</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="elice,kesia" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Elice,Kesia</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.51</td>
+<td class="num" style="font-weight:600">231</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">1440</td>
+<td class="num">1.51</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="smaali,cherazade" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Smaali,Cherazade</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.51</td>
+<td class="num" style="font-weight:600">134</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.51</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="tchikaya,jade tchikaya" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>tchikaya,jade tchikaya</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.50</td>
+<td class="num" style="font-weight:600">219</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.50</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
@@ -565,302 +349,110 @@
 <td>Sidibe,Sekou</td>
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.26</td>
-<td class="num" style="font-weight:600">379</td>
-<td class="num">0.32</td>
-<td class="num" style="font-weight:600">109</td>
-<td class="num">1.58</td>
-<td class="num">80%</td>
-<td class="num">20%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:80%"></div><div class="bar-rcv" style="width:20%"></div></div></td>
-</tr><tr data-name="kaddouri,amine" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Kaddouri,Amine</td>
+<td class="num">1.28</td>
+<td class="num" style="font-weight:600">375</td>
+<td class="num">0.22</td>
+<td class="num" style="font-weight:600">215</td>
+<td class="num">1.50</td>
+<td class="num">85%</td>
+<td class="num">15%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:85%"></div><div class="bar-rcv" style="width:15%"></div></div></td>
+</tr><tr data-name="gouttih,assia" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Gouttih,Assia</td>
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.06</td>
-<td class="num" style="font-weight:600">544</td>
-<td class="num">0.52</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">67%</td>
-<td class="num">33%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:67%"></div><div class="bar-rcv" style="width:33%"></div></div></td>
-</tr><tr data-name="offredo,sylvie" data-manager="MARDI,Yassir" data-type="AMZN">
-<td>Offredo,Sylvie</td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.48</td>
+<td class="num" style="font-weight:600">295</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num" style="font-weight:600">1125</td>
-<td class="num">1.58</td>
-<td class="num">0%</td>
+<td class="num">1.48</td>
 <td class="num">100%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:100%"></div></div></td>
-</tr><tr data-name="niasme,yvette" data-manager="BADI,Aicha" data-type="AMZN">
-<td>Niasme,Yvette</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="tokmak,hatice" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Tokmak,Hatice</td>
 <td>BADI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.58</td>
-<td class="num" style="font-weight:600">1024</td>
-<td class="num">1.00</td>
-<td class="num" style="font-weight:600">399</td>
-<td class="num">1.58</td>
-<td class="num">37%</td>
-<td class="num">63%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:37%"></div><div class="bar-rcv" style="width:63%"></div></div></td>
-</tr><tr data-name="azi,yannis" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Azi,Yannis</td>
-<td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.20</td>
-<td class="num" style="font-weight:600">643</td>
-<td class="num">0.38</td>
+<td class="num">1.46</td>
+<td class="num" style="font-weight:600">1175</td>
+<td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">76%</td>
-<td class="num">24%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:76%"></div><div class="bar-rcv" style="width:24%"></div></div></td>
-</tr><tr data-name="enyifo,diana" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Enyifo,Diana</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.23</td>
-<td class="num" style="font-weight:600">609</td>
-<td class="num">1.35</td>
-<td class="num" style="font-weight:600">101</td>
-<td class="num">1.58</td>
-<td class="num">15%</td>
-<td class="num">85%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:15%"></div><div class="bar-rcv" style="width:85%"></div></div></td>
+<td class="num">1.46</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
 </tr><tr data-name="ikota,joyce" data-manager="Sfaxi,Emna" data-type="3PTY">
 <td>Ikota,Joyce</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.42</td>
-<td class="num" style="font-weight:600">506</td>
-<td class="num">0.16</td>
-<td class="num" style="font-weight:600">100</td>
-<td class="num">1.58</td>
-<td class="num">90%</td>
-<td class="num">10%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:90%"></div><div class="bar-rcv" style="width:10%"></div></div></td>
-</tr><tr data-name="attoumani,nourah" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>ATTOUMANI,Nourah</td>
+<td class="num">1.43</td>
+<td class="num" style="font-weight:600">514</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.43</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="azi,yannis" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Azi,Yannis</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
 <td class="num">1.43</td>
-<td class="num" style="font-weight:600">266</td>
-<td class="num">0.15</td>
+<td class="num" style="font-weight:600">544</td>
+<td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.58</td>
-<td class="num">91%</td>
-<td class="num">9%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:91%"></div><div class="bar-rcv" style="width:9%"></div></div></td>
-</tr><tr data-name="amdaoud,mounia" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Amdaoud,Mounia</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.33</td>
-<td class="num" style="font-weight:600">561</td>
-<td class="num">1.24</td>
-<td class="num" style="font-weight:600">548</td>
-<td class="num">1.57</td>
-<td class="num">21%</td>
-<td class="num">79%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:21%"></div><div class="bar-rcv" style="width:79%"></div></div></td>
+<td class="num">1.43</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
 </tr><tr data-name="simaga,mariam" data-manager="Sfaxi,Emna" data-type="3PTY">
 <td>Simaga,Mariam</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.26</td>
-<td class="num" style="font-weight:600">409</td>
-<td class="num">0.31</td>
-<td class="num" style="font-weight:600">174</td>
-<td class="num">1.57</td>
-<td class="num">80%</td>
-<td class="num">20%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:80%"></div><div class="bar-rcv" style="width:20%"></div></div></td>
-</tr><tr data-name="slamani,mohamed" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Slamani,Mohamed</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.47</td>
-<td class="num" style="font-weight:600">1402</td>
-<td class="num">1.10</td>
-<td class="num" style="font-weight:600">252</td>
-<td class="num">1.57</td>
-<td class="num">30%</td>
-<td class="num">70%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:30%"></div><div class="bar-rcv" style="width:70%"></div></div></td>
-</tr><tr data-name="doukoure,abdoulaye" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Doukoure,Abdoulaye</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.06</td>
-<td class="num" style="font-weight:600">578</td>
-<td class="num">0.51</td>
-<td class="num" style="font-weight:600">163</td>
-<td class="num">1.57</td>
-<td class="num">68%</td>
-<td class="num">32%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:68%"></div><div class="bar-rcv" style="width:32%"></div></div></td>
-</tr><tr data-name="seck,sadio sophie" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Seck,Sadio sophie</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.38</td>
-<td class="num" style="font-weight:600">573</td>
-<td class="num">0.19</td>
-<td class="num" style="font-weight:600">63</td>
-<td class="num">1.57</td>
-<td class="num">88%</td>
-<td class="num">12%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:88%"></div><div class="bar-rcv" style="width:12%"></div></div></td>
-</tr><tr data-name="verhiepe,angelique" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Verhiepe,Angelique</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.67</td>
-<td class="num" style="font-weight:600">301</td>
-<td class="num">0.90</td>
-<td class="num" style="font-weight:600">288</td>
-<td class="num">1.57</td>
-<td class="num">43%</td>
-<td class="num">57%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:43%"></div><div class="bar-rcv" style="width:57%"></div></div></td>
-</tr><tr data-name="thibaudeau,bernadette" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Thibaudeau,Bernadette</td>
+<td class="num">1.35</td>
+<td class="num" style="font-weight:600">442</td>
+<td class="num">0.04</td>
+<td class="num" style="font-weight:600">864</td>
+<td class="num">1.39</td>
+<td class="num">97%</td>
+<td class="num">3%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:97%"></div><div class="bar-rcv" style="width:3%"></div></div></td>
+</tr><tr data-name="turedu,oguzhan" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Turedu,Oguzhan</td>
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.22</td>
-<td class="num" style="font-weight:600">770</td>
-<td class="num">0.35</td>
-<td class="num" style="font-weight:600">423</td>
-<td class="num">1.57</td>
-<td class="num">78%</td>
-<td class="num">22%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:78%"></div><div class="bar-rcv" style="width:22%"></div></div></td>
-</tr><tr data-name="ahmed ben lahssen,chrystelle sylvie" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>AHMED BEN LAHSSEN,Chrystelle Sylvie</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.30</td>
-<td class="num" style="font-weight:600">248</td>
-<td class="num">0.26</td>
-<td class="num" style="font-weight:600">115</td>
-<td class="num">1.56</td>
-<td class="num">83%</td>
-<td class="num">17%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:83%"></div><div class="bar-rcv" style="width:17%"></div></div></td>
-</tr><tr data-name="pedro,divine" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Pedro,Divine</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.31</td>
-<td class="num" style="font-weight:600">278</td>
-<td class="num">0.23</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.54</td>
-<td class="num">85%</td>
-<td class="num">15%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:85%"></div><div class="bar-rcv" style="width:15%"></div></div></td>
-</tr><tr data-name="gappu,noella" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Gappu,Noella</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.43</td>
-<td class="num" style="font-weight:600">276</td>
-<td class="num">0.10</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.53</td>
-<td class="num">93%</td>
-<td class="num">7%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:93%"></div><div class="bar-rcv" style="width:7%"></div></div></td>
-</tr><tr data-name="smaali,cherazade" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Smaali,Cherazade</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.30</td>
-<td class="num" style="font-weight:600">156</td>
-<td class="num">0.23</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.53</td>
-<td class="num">85%</td>
-<td class="num">15%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:85%"></div><div class="bar-rcv" style="width:15%"></div></div></td>
-</tr><tr data-name="elice,kesia" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Elice,Kesia</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.31</td>
-<td class="num" style="font-weight:600">241</td>
-<td class="num">0.21</td>
-<td class="num" style="font-weight:600">29</td>
-<td class="num">1.52</td>
-<td class="num">86%</td>
-<td class="num">14%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:86%"></div><div class="bar-rcv" style="width:14%"></div></div></td>
-</tr><tr data-name="montilus,fabiola" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Montilus,Fabiola</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.51</td>
-<td class="num" style="font-weight:600">0</td>
+<td class="num">1.39</td>
+<td class="num" style="font-weight:600">565</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.51</td>
+<td class="num">1.39</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="klein,sebastien" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Klein,Sebastien</td>
+</tr><tr data-name="zazoun,fany" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Zazoun,Fany</td>
 <td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.51</td>
-<td class="num" style="font-weight:600">0</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.36</td>
+<td class="num" style="font-weight:600">268</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.51</td>
+<td class="num">1.36</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="abandzounou,marc eddy" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Abandzounou,Marc Eddy</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.18</td>
-<td class="num" style="font-weight:600">592</td>
-<td class="num">0.31</td>
-<td class="num" style="font-weight:600">19</td>
-<td class="num">1.49</td>
-<td class="num">79%</td>
-<td class="num">21%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:79%"></div><div class="bar-rcv" style="width:21%"></div></div></td>
 </tr><tr data-name="yousuf,shayan" data-manager="BADI,Aicha" data-type="3PTY">
 <td>Yousuf,Shayan</td>
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.37</td>
-<td class="num" style="font-weight:600">289</td>
+<td class="num">1.35</td>
+<td class="num" style="font-weight:600">293</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.37</td>
+<td class="num">1.35</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="friaa,sabrin-aïcha" data-manager="MARDI,Yassir" data-type="3PTY">
-<td>Friaa,Sabrin-Aïcha</td>
-<td>MARDI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.44</td>
-<td class="num" style="font-weight:600">918</td>
-<td class="num">0.91</td>
-<td class="num" style="font-weight:600">53</td>
-<td class="num">1.35</td>
-<td class="num">33%</td>
-<td class="num">67%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:33%"></div><div class="bar-rcv" style="width:67%"></div></div></td>
 </tr><tr data-name="okyar,muzeyyen" data-manager="Sfaxi,Emna" data-type="3PTY">
 <td>Okyar,Muzeyyen</td>
 <td>Sfaxi</td>
@@ -873,15 +465,99 @@
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="tokmak,hatice" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Tokmak,Hatice</td>
-<td>BADI</td>
+</tr><tr data-name="diallo,adjidiatou" data-manager="DARIF,Zakaria" data-type="3PTY">
+<td>Diallo,Adjidiatou</td>
+<td>DARIF</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.32</td>
-<td class="num" style="font-weight:600">1294</td>
+<td class="num">1.27</td>
+<td class="num" style="font-weight:600">336</td>
+<td class="num">0.06</td>
+<td class="num" style="font-weight:600">431</td>
+<td class="num">1.33</td>
+<td class="num">95%</td>
+<td class="num">5%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:95%"></div><div class="bar-rcv" style="width:5%"></div></div></td>
+</tr><tr data-name="kuyedisa,sylviane" data-manager="MARDI,Yassir" data-type="3PTY">
+<td>Kuyedisa,Sylviane</td>
+<td>MARDI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.33</td>
+<td class="num" style="font-weight:600">450</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.32</td>
+<td class="num">1.33</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="hodin,tyffaine" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Hodin,Tyffaine</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.30</td>
+<td class="num" style="font-weight:600">349</td>
+<td class="num">0.03</td>
+<td class="num" style="font-weight:600">36</td>
+<td class="num">1.33</td>
+<td class="num">98%</td>
+<td class="num">2%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:98%"></div><div class="bar-rcv" style="width:2%"></div></div></td>
+</tr><tr data-name="thibaudeau,bernadette" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Thibaudeau,Bernadette</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.30</td>
+<td class="num" style="font-weight:600">721</td>
+<td class="num">0.03</td>
+<td class="num" style="font-weight:600">1652</td>
+<td class="num">1.33</td>
+<td class="num">98%</td>
+<td class="num">2%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:98%"></div><div class="bar-rcv" style="width:2%"></div></div></td>
+</tr><tr data-name="abandzounou,marc eddy" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Abandzounou,Marc Eddy</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.30</td>
+<td class="num" style="font-weight:600">537</td>
+<td class="num">0.01</td>
+<td class="num" style="font-weight:600">675</td>
+<td class="num">1.31</td>
+<td class="num">99%</td>
+<td class="num">1%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:99%"></div><div class="bar-rcv" style="width:1%"></div></div></td>
+</tr><tr data-name="muamba odia,dhydhy" data-manager="DARIF,Zakaria" data-type="AMZN">
+<td>MUAMBA ODIA,Dhydhy</td>
+<td>DARIF</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.27</td>
+<td class="num" style="font-weight:600">744</td>
+<td class="num">0.03</td>
+<td class="num" style="font-weight:600">996</td>
+<td class="num">1.30</td>
+<td class="num">98%</td>
+<td class="num">2%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:98%"></div><div class="bar-rcv" style="width:2%"></div></div></td>
+</tr><tr data-name="matondo,marc" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Matondo,Marc</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.71</td>
+<td class="num" style="font-weight:600">190</td>
+<td class="num">0.58</td>
+<td class="num" style="font-weight:600">185</td>
+<td class="num">1.29</td>
+<td class="num">55%</td>
+<td class="num">45%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:55%"></div><div class="bar-rcv" style="width:45%"></div></div></td>
+</tr><tr data-name="leon,ludivine" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Leon,Ludivine</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.28</td>
+<td class="num" style="font-weight:600">405</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.28</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
@@ -891,21 +567,9 @@
 <td><span class="type-badge type-3PTY">3PTY</span></td>
 <td class="num">1.25</td>
 <td class="num" style="font-weight:600">104</td>
-<td class="num">0.02</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.27</td>
-<td class="num">98%</td>
-<td class="num">2%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:98%"></div><div class="bar-rcv" style="width:2%"></div></div></td>
-</tr><tr data-name="kuyedisa,sylviane" data-manager="MARDI,Yassir" data-type="3PTY">
-<td>Kuyedisa,Sylviane</td>
-<td>MARDI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.27</td>
-<td class="num" style="font-weight:600">463</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.27</td>
+<td class="num">1.25</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
@@ -914,37 +578,109 @@
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
 <td class="num">1.25</td>
-<td class="num" style="font-weight:600">484</td>
+<td class="num" style="font-weight:600">485</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
 <td class="num">1.25</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="zazoun,fany" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Zazoun,Fany</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.20</td>
-<td class="num" style="font-weight:600">296</td>
+</tr><tr data-name="akande,saheed olanrewaju" data-manager="DARIF,Zakaria" data-type="AMZN">
+<td>Akande,Saheed Olanrewaju</td>
+<td>DARIF</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.25</td>
+<td class="num" style="font-weight:600">376</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.20</td>
+<td class="num">1.25</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="leon,ludivine" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Leon,Ludivine</td>
+</tr><tr data-name="verhiepe,angelique" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Verhiepe,Angelique</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.16</td>
-<td class="num" style="font-weight:600">434</td>
+<td class="num">0.67</td>
+<td class="num" style="font-weight:600">301</td>
+<td class="num">0.56</td>
+<td class="num" style="font-weight:600">412</td>
+<td class="num">1.23</td>
+<td class="num">54%</td>
+<td class="num">46%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:54%"></div><div class="bar-rcv" style="width:46%"></div></div></td>
+</tr><tr data-name="haidara,ismael" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Haidara,Ismael</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.15</td>
+<td class="num" style="font-weight:600">504</td>
+<td class="num">0.07</td>
+<td class="num" style="font-weight:600">228</td>
+<td class="num">1.22</td>
+<td class="num">94%</td>
+<td class="num">6%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:94%"></div><div class="bar-rcv" style="width:6%"></div></div></td>
+</tr><tr data-name="doukoure,abdoulaye" data-manager="Sfaxi,Emna" data-type="AMZN">
+<td>Doukoure,Abdoulaye</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.11</td>
+<td class="num" style="font-weight:600">575</td>
+<td class="num">0.09</td>
+<td class="num" style="font-weight:600">125</td>
+<td class="num">1.20</td>
+<td class="num">92%</td>
+<td class="num">7%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:92%"></div><div class="bar-rcv" style="width:7%"></div></div></td>
+</tr><tr data-name="rachidi,nacera" data-manager="DARIF,Zakaria" data-type="3PTY">
+<td>Rachidi,Nacera</td>
+<td>DARIF</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.19</td>
+<td class="num" style="font-weight:600">231</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.16</td>
+<td class="num">1.19</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="oturak,selin" data-manager="LAMACHI,IMANE" data-type="AMZN">
+<td>Oturak,Selin</td>
+<td>LAMACHI</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">0.99</td>
+<td class="num" style="font-weight:600">446</td>
+<td class="num">0.16</td>
+<td class="num" style="font-weight:600">45</td>
+<td class="num">1.15</td>
+<td class="num">86%</td>
+<td class="num">14%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:86%"></div><div class="bar-rcv" style="width:14%"></div></div></td>
+</tr><tr data-name="kaddouri,amine" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Kaddouri,Amine</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.15</td>
+<td class="num" style="font-weight:600">504</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.15</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="kheriji,amine" data-manager="BELHADJ,Abdelkader" data-type="3PTY">
+<td>Kheriji,Amine</td>
+<td>BELHADJ</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.13</td>
+<td class="num" style="font-weight:600">798</td>
+<td class="num">0.01</td>
+<td class="num" style="font-weight:600">372</td>
+<td class="num">1.14</td>
+<td class="num">99%</td>
+<td class="num">1%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:99%"></div><div class="bar-rcv" style="width:1%"></div></div></td>
 </tr><tr data-name="elmajni,adam mahdi" data-manager="BADI,Aicha" data-type="3PTY">
 <td>Elmajni,Adam Mahdi</td>
 <td>BADI</td>
@@ -957,39 +693,51 @@
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="neki,maylis" data-manager="MARDI,Yassir" data-type="3PTY">
+<td>Neki,Maylis</td>
+<td>MARDI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.11</td>
+<td class="num" style="font-weight:600">422</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.11</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="di lauro,marta" data-manager="BADI,Aicha" data-type="AMZN">
+<td>Di lauro,Marta</td>
+<td>BADI</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">1.10</td>
+<td class="num" style="font-weight:600">119</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">1.10</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
 </tr><tr data-name="frayon,maria do carmo" data-manager="Sfaxi,Emna" data-type="AMZN">
 <td>Frayon,Maria Do carmo</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.07</td>
-<td class="num" style="font-weight:600">1809</td>
+<td class="num">1.09</td>
+<td class="num" style="font-weight:600">1789</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.07</td>
+<td class="num">1.09</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="assoumou,joelle christelle" data-manager="MARDI,Yassir" data-type="AMZN">
-<td>ASSOUMOU,JOELLE CHRISTELLE</td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.49</td>
-<td class="num" style="font-weight:600">1286</td>
-<td class="num">0.57</td>
-<td class="num" style="font-weight:600">374</td>
-<td class="num">1.06</td>
-<td class="num">46%</td>
-<td class="num">54%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:46%"></div><div class="bar-rcv" style="width:54%"></div></div></td>
-</tr><tr data-name="akande,saheed olanrewaju" data-manager="DARIF,Zakaria" data-type="AMZN">
-<td>Akande,Saheed Olanrewaju</td>
-<td>DARIF</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">1.04</td>
-<td class="num" style="font-weight:600">419</td>
+</tr><tr data-name="benbiga,ismaele" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>BENBIGA,Ismaele</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">1.07</td>
+<td class="num" style="font-weight:600">423</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">1.04</td>
+<td class="num">1.07</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
@@ -1005,87 +753,123 @@
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="neki,maylis" data-manager="MARDI,Yassir" data-type="3PTY">
-<td>Neki,Maylis</td>
-<td>MARDI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">1.00</td>
-<td class="num" style="font-weight:600">452</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">1.00</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="benbiga,ismaele" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>BENBIGA,Ismaele</td>
+</tr><tr data-name="pereira da costa,lucia" data-manager="Sfaxi,Emna" data-type="AMZN">
+<td>Pereira Da Costa,Lucia</td>
 <td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.95</td>
-<td class="num" style="font-weight:600">457</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.95</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="rachidi,nacera" data-manager="DARIF,Zakaria" data-type="3PTY">
-<td>Rachidi,Nacera</td>
-<td>DARIF</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.94</td>
-<td class="num" style="font-weight:600">241</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.94</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">0.85</td>
+<td class="num" style="font-weight:600">1586</td>
+<td class="num">0.16</td>
+<td class="num" style="font-weight:600">562</td>
+<td class="num">1.01</td>
+<td class="num">84%</td>
+<td class="num">16%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:84%"></div><div class="bar-rcv" style="width:16%"></div></div></td>
+</tr><tr data-name="niasme,yvette" data-manager="BADI,Aicha" data-type="AMZN">
+<td>Niasme,Yvette</td>
+<td>BADI</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">0.68</td>
+<td class="num" style="font-weight:600">886</td>
+<td class="num">0.28</td>
+<td class="num" style="font-weight:600">769</td>
+<td class="num">0.96</td>
+<td class="num">71%</td>
+<td class="num">29%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:71%"></div><div class="bar-rcv" style="width:29%"></div></div></td>
 </tr><tr data-name="khaled,jihad" data-manager="Sfaxi,Emna" data-type="3PTY">
 <td>Khaled,Jihad</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.90</td>
-<td class="num" style="font-weight:600">1487</td>
+<td class="num">0.95</td>
+<td class="num" style="font-weight:600">1422</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">0.90</td>
+<td class="num">0.95</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="di lauro,marta" data-manager="BADI,Aicha" data-type="AMZN">
-<td>Di lauro,Marta</td>
-<td>BADI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.90</td>
-<td class="num" style="font-weight:600">140</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.90</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="houssene,hassanaty" data-manager="MARDI,Yassir" data-type="3PTY">
-<td>Houssene,Hassanaty</td>
-<td>MARDI</td>
+</tr><tr data-name="gonzalez,gerald" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Gonzalez,Gerald</td>
+<td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.07</td>
-<td class="num" style="font-weight:600">643</td>
-<td class="num">0.77</td>
-<td class="num" style="font-weight:600">123</td>
-<td class="num">0.84</td>
-<td class="num">8%</td>
-<td class="num">92%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:8%"></div><div class="bar-rcv" style="width:92%"></div></div></td>
+<td class="num">0.80</td>
+<td class="num" style="font-weight:600">620</td>
+<td class="num">0.14</td>
+<td class="num" style="font-weight:600">406</td>
+<td class="num">0.94</td>
+<td class="num">85%</td>
+<td class="num">15%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:85%"></div><div class="bar-rcv" style="width:15%"></div></div></td>
+</tr><tr data-name="guei,ninsemou" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Guei,Ninsemou</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.73</td>
+<td class="num" style="font-weight:600">297</td>
+<td class="num">0.16</td>
+<td class="num" style="font-weight:600">424</td>
+<td class="num">0.89</td>
+<td class="num">82%</td>
+<td class="num">18%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:82%"></div><div class="bar-rcv" style="width:18%"></div></div></td>
 </tr><tr data-name="samar,serina" data-manager="BADI,Aicha" data-type="3PTY">
 <td>Samar,Serina</td>
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
 <td class="num">0.77</td>
-<td class="num" style="font-weight:600">284</td>
+<td class="num" style="font-weight:600">285</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
 <td class="num">0.77</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="friaa,sabrin-aïcha" data-manager="MARDI,Yassir" data-type="3PTY">
+<td>Friaa,Sabrin-Aïcha</td>
+<td>MARDI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.69</td>
+<td class="num" style="font-weight:600">658</td>
+<td class="num">0.08</td>
+<td class="num" style="font-weight:600">311</td>
+<td class="num">0.77</td>
+<td class="num">90%</td>
+<td class="num">10%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:90%"></div><div class="bar-rcv" style="width:10%"></div></div></td>
+</tr><tr data-name="enyifo,diana" data-manager="Sfaxi,Emna" data-type="AMZN">
+<td>Enyifo,Diana</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">0.23</td>
+<td class="num" style="font-weight:600">663</td>
+<td class="num">0.53</td>
+<td class="num" style="font-weight:600">142</td>
+<td class="num">0.76</td>
+<td class="num">30%</td>
+<td class="num">70%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:30%"></div><div class="bar-rcv" style="width:70%"></div></div></td>
+</tr><tr data-name="slamani,mohamed" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Slamani,Mohamed</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.47</td>
+<td class="num" style="font-weight:600">1410</td>
+<td class="num">0.21</td>
+<td class="num" style="font-weight:600">425</td>
+<td class="num">0.68</td>
+<td class="num">69%</td>
+<td class="num">31%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:69%"></div><div class="bar-rcv" style="width:31%"></div></div></td>
+</tr><tr data-name="wideham,kendra" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Wideham,Kendra</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.67</td>
+<td class="num" style="font-weight:600">58</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">0.67</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
@@ -1094,7 +878,7 @@
 <td>Sfaxi</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
 <td class="num">0.64</td>
-<td class="num" style="font-weight:600">181</td>
+<td class="num" style="font-weight:600">180</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
 <td class="num">0.64</td>
@@ -1106,46 +890,46 @@
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
 <td class="num">0.54</td>
-<td class="num" style="font-weight:600">130</td>
-<td class="num">0.10</td>
-<td class="num" style="font-weight:600">520</td>
-<td class="num">0.64</td>
-<td class="num">84%</td>
-<td class="num">16%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:84%"></div><div class="bar-rcv" style="width:16%"></div></div></td>
-</tr><tr data-name="mody,cidiba" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Mody,Cidiba</td>
-<td>BADI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.22</td>
-<td class="num" style="font-weight:600">686</td>
-<td class="num">0.35</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.57</td>
-<td class="num">39%</td>
-<td class="num">61%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:39%"></div><div class="bar-rcv" style="width:61%"></div></div></td>
-</tr><tr data-name="adou,amoakon georges" data-manager="Sfaxi,Emna" data-type="AMZN">
-<td>Adou,Amoakon Georges</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num" style="font-weight:600">129</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
 <td class="num">0.54</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.54</td>
-<td class="num">0%</td>
 <td class="num">100%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:100%"></div></div></td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
 </tr><tr data-name="cayarcy,jason" data-manager="Elkaddouri,Zahira" data-type="AMZN">
 <td>Cayarcy,Jason</td>
 <td>Elkaddouri</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
 <td class="num">0.53</td>
-<td class="num" style="font-weight:600">313</td>
+<td class="num" style="font-weight:600">311</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
 <td class="num">0.53</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="assoumou,joelle christelle" data-manager="MARDI,Yassir" data-type="AMZN">
+<td>ASSOUMOU,JOELLE CHRISTELLE</td>
+<td>MARDI</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">0.52</td>
+<td class="num" style="font-weight:600">1375</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">0.52</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="jeune,joshua" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Jeune,Joshua</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.50</td>
+<td class="num" style="font-weight:600">151</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">0.50</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
@@ -1154,58 +938,94 @@
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
 <td class="num">0.49</td>
-<td class="num" style="font-weight:600">247</td>
+<td class="num" style="font-weight:600">245</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
 <td class="num">0.49</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
-</tr><tr data-name="kantiono,sandrine" data-manager="MARDI,Yassir" data-type="AMZN">
-<td>Kantiono,Sandrine</td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
+</tr><tr data-name="dogan,mustafa" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Dogan,Mustafa</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.49</td>
+<td class="num" style="font-weight:600">283</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">0.47</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.47</td>
-<td class="num">0%</td>
+<td class="num">0.49</td>
 <td class="num">100%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:100%"></div></div></td>
-</tr><tr data-name="wallez,philippe" data-manager="MARDI,Yassir" data-type="AMZN">
-<td>Wallez,Philippe</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="fenni,loubna" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Fenni,Loubna</td>
+<td>BADI</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.48</td>
+<td class="num" style="font-weight:600">787</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">0.48</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="houssene,hassanaty" data-manager="MARDI,Yassir" data-type="3PTY">
+<td>Houssene,Hassanaty</td>
 <td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.02</td>
-<td class="num" style="font-weight:600">1950</td>
-<td class="num">0.43</td>
-<td class="num" style="font-weight:600">116</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.07</td>
+<td class="num" style="font-weight:600">653</td>
+<td class="num">0.38</td>
+<td class="num" style="font-weight:600">219</td>
 <td class="num">0.45</td>
-<td class="num">4%</td>
-<td class="num">96%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:4%"></div><div class="bar-rcv" style="width:96%"></div></div></td>
+<td class="num">16%</td>
+<td class="num">84%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:16%"></div><div class="bar-rcv" style="width:84%"></div></div></td>
+</tr><tr data-name="chahid,rachid" data-manager="Elkaddouri,Zahira" data-type="AMZN">
+<td>Chahid,Rachid</td>
+<td>Elkaddouri</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">0.04</td>
+<td class="num" style="font-weight:600">282</td>
+<td class="num">0.39</td>
+<td class="num" style="font-weight:600">62</td>
+<td class="num">0.43</td>
+<td class="num">9%</td>
+<td class="num">91%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:9%"></div><div class="bar-rcv" style="width:91%"></div></div></td>
+</tr><tr data-name="ndakala,jephte" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Ndakala,Jephte</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.33</td>
+<td class="num" style="font-weight:600">1217</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">0.33</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
 </tr><tr data-name="tote gbélé,jeanine ella" data-manager="MARDI,Yassir" data-type="AMZN">
 <td>TOTE GBÉLÉ,Jeanine Ella</td>
 <td>MARDI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
 <td class="num">0.17</td>
-<td class="num" style="font-weight:600">129</td>
-<td class="num">0.23</td>
-<td class="num" style="font-weight:600">35</td>
-<td class="num">0.40</td>
-<td class="num">42%</td>
-<td class="num">57%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:42%"></div><div class="bar-rcv" style="width:57%"></div></div></td>
-</tr><tr data-name="fenni,loubna" data-manager="BADI,Aicha" data-type="3PTY">
-<td>Fenni,Loubna</td>
+<td class="num" style="font-weight:600">207</td>
+<td class="num">0.08</td>
+<td class="num" style="font-weight:600">102</td>
+<td class="num">0.25</td>
+<td class="num">68%</td>
+<td class="num">32%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:68%"></div><div class="bar-rcv" style="width:32%"></div></div></td>
+</tr><tr data-name="mody,cidiba" data-manager="BADI,Aicha" data-type="3PTY">
+<td>Mody,Cidiba</td>
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.38</td>
-<td class="num" style="font-weight:600">858</td>
+<td class="num">0.22</td>
+<td class="num" style="font-weight:600">695</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
-<td class="num">0.38</td>
+<td class="num">0.22</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
@@ -1214,94 +1034,34 @@
 <td>MARDI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
 <td class="num">0.15</td>
-<td class="num" style="font-weight:600">667</td>
-<td class="num">0.20</td>
-<td class="num" style="font-weight:600">620</td>
-<td class="num">0.35</td>
-<td class="num">43%</td>
-<td class="num">57%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:43%"></div><div class="bar-rcv" style="width:57%"></div></div></td>
+<td class="num" style="font-weight:600">649</td>
+<td class="num">0.06</td>
+<td class="num" style="font-weight:600">296</td>
+<td class="num">0.21</td>
+<td class="num">71%</td>
+<td class="num">29%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:71%"></div><div class="bar-rcv" style="width:29%"></div></div></td>
 </tr><tr data-name="pierret,cécile" data-manager="Sfaxi,Emna" data-type="AMZN">
 <td>PIERRET,Cécile</td>
 <td>Sfaxi</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
 <td class="num">0.04</td>
-<td class="num" style="font-weight:600">100</td>
-<td class="num">0.27</td>
-<td class="num" style="font-weight:600">119</td>
-<td class="num">0.31</td>
-<td class="num">13%</td>
-<td class="num">87%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:13%"></div><div class="bar-rcv" style="width:87%"></div></div></td>
-</tr><tr data-name="dada,lisiane" data-manager="MARDI,Yassir" data-type="3PTY">
-<td>Dada,Lisiane</td>
-<td>MARDI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.27</td>
-<td class="num" style="font-weight:600">78</td>
-<td class="num">0.27</td>
-<td class="num">0%</td>
-<td class="num">100%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:100%"></div></div></td>
-</tr><tr data-name="chahid,rachid" data-manager="Elkaddouri,Zahira" data-type="AMZN">
-<td>Chahid,Rachid</td>
-<td>Elkaddouri</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.04</td>
-<td class="num" style="font-weight:600">300</td>
-<td class="num">0.22</td>
-<td class="num" style="font-weight:600">82</td>
-<td class="num">0.26</td>
-<td class="num">15%</td>
-<td class="num">85%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:15%"></div><div class="bar-rcv" style="width:85%"></div></div></td>
-</tr><tr data-name="ndakala,jephte" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Ndakala,Jephte</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.09</td>
-<td class="num" style="font-weight:600">3400</td>
-<td class="num">0.15</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.24</td>
-<td class="num">38%</td>
-<td class="num">62%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:38%"></div><div class="bar-rcv" style="width:62%"></div></div></td>
-</tr><tr data-name="daniel,orlane" data-manager="MARDI,Yassir" data-type="3PTY">
-<td>Daniel,Orlane</td>
-<td>MARDI</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.09</td>
-<td class="num" style="font-weight:600">67</td>
-<td class="num">0.13</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.22</td>
-<td class="num">41%</td>
-<td class="num">59%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:41%"></div><div class="bar-rcv" style="width:59%"></div></div></td>
-</tr><tr data-name="mpata,brayane" data-manager="Sfaxi,Emna" data-type="3PTY">
-<td>Mpata,Brayane</td>
-<td>Sfaxi</td>
-<td><span class="type-badge type-3PTY">3PTY</span></td>
-<td class="num">0.16</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.16</td>
-<td class="num">100%</td>
-<td class="num">0%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+<td class="num" style="font-weight:600">96</td>
+<td class="num">0.14</td>
+<td class="num" style="font-weight:600">221</td>
+<td class="num">0.18</td>
+<td class="num">22%</td>
+<td class="num">78%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:22%"></div><div class="bar-rcv" style="width:78%"></div></div></td>
 </tr><tr data-name="bouillon,marie christine" data-manager="MARDI,Yassir" data-type="AMZN">
 <td>Bouillon,Marie Christine</td>
 <td>MARDI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
 <td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.11</td>
-<td class="num" style="font-weight:600">109</td>
-<td class="num">0.11</td>
+<td class="num" style="font-weight:600">10800</td>
+<td class="num">0.12</td>
+<td class="num" style="font-weight:600">338</td>
+<td class="num">0.12</td>
 <td class="num">0%</td>
 <td class="num">100%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:100%"></div></div></td>
@@ -1310,10 +1070,34 @@
 <td>BADI</td>
 <td><span class="type-badge type-3PTY">3PTY</span></td>
 <td class="num">0.10</td>
-<td class="num" style="font-weight:600">100</td>
+<td class="num" style="font-weight:600">104</td>
 <td class="num">0.00</td>
 <td class="num" style="font-weight:600">0</td>
 <td class="num">0.10</td>
+<td class="num">100%</td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
+</tr><tr data-name="kante,assa" data-manager="Sfaxi,Emna" data-type="3PTY">
+<td>Kante,Assa</td>
+<td>Sfaxi</td>
+<td><span class="type-badge type-3PTY">3PTY</span></td>
+<td class="num">0.07</td>
+<td class="num" style="font-weight:600">1224</td>
+<td class="num">0.01</td>
+<td class="num" style="font-weight:600">982</td>
+<td class="num">0.08</td>
+<td class="num">88%</td>
+<td class="num">12%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:88%"></div><div class="bar-rcv" style="width:12%"></div></div></td>
+</tr><tr data-name="wallez,philippe" data-manager="MARDI,Yassir" data-type="AMZN">
+<td>Wallez,Philippe</td>
+<td>MARDI</td>
+<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num">0.07</td>
+<td class="num" style="font-weight:600">677</td>
+<td class="num">0.00</td>
+<td class="num" style="font-weight:600">0</td>
+<td class="num">0.07</td>
 <td class="num">100%</td>
 <td class="num">0%</td>
 <td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
@@ -1322,37 +1106,13 @@
 <td>MARDI</td>
 <td><span class="type-badge type-AMZN">AMZN</span></td>
 <td class="num">0.02</td>
-<td class="num" style="font-weight:600">400</td>
-<td class="num">0.08</td>
-<td class="num" style="font-weight:600">300</td>
-<td class="num">0.10</td>
-<td class="num">20%</td>
-<td class="num">80%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:20%"></div><div class="bar-rcv" style="width:80%"></div></div></td>
-</tr><tr data-name="keita,marie claire" data-manager="MARDI,Yassir" data-type="AMZN">
-<td>Keita,Marie Claire</td>
-<td>MARDI</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
+<td class="num" style="font-weight:600">436</td>
 <td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.06</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.06</td>
-<td class="num">0%</td>
-<td class="num">100%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:100%"></div></div></td>
-</tr><tr data-name="debray,clara" data-manager="Brun,Alexis" data-type="AMZN">
-<td>Debray,Clara</td>
-<td>Brun</td>
-<td><span class="type-badge type-AMZN">AMZN</span></td>
-<td class="num">0.00</td>
-<td class="num" style="font-weight:600">0</td>
+<td class="num" style="font-weight:600">28800</td>
 <td class="num">0.02</td>
-<td class="num" style="font-weight:600">0</td>
-<td class="num">0.02</td>
-<td class="num">0%</td>
 <td class="num">100%</td>
-<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:0%"></div><div class="bar-rcv" style="width:100%"></div></div></td>
+<td class="num">0%</td>
+<td class="bar-cell"><div class="bar"><div class="bar-dct" style="width:100%"></div><div class="bar-rcv" style="width:0%"></div></div></td>
 </tr>
 </tbody></table></div>
 <script>
