@@ -28,7 +28,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .controls select { min-width: 130px; }
 .table-wrap { padding: 12px 24px 24px; overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
-th { background: #161b22; border-bottom: 2px solid #30363d; padding: 8px 6px; text-align: left; color: #8b949e; font-weight: 600; text-transform: uppercase; font-size: 0.68rem; position: sticky; top: 140px; z-index: 10; cursor: pointer; white-space: nowrap; }
+th { background: #161b22; border-bottom: 2px solid #30363d; padding: 8px 6px; text-align: left; color: #8b949e; font-weight: 600; text-transform: uppercase; font-size: 0.68rem; position: sticky; top: var(--header-h, 218px); z-index: 10; cursor: pointer; white-space: nowrap; }
 th:hover { color: #58a6ff; }
 th.sorted-asc::after { content: ' ▲'; color: #58a6ff; }
 th.sorted-desc::after { content: ' ▼'; color: #58a6ff; }
@@ -291,9 +291,33 @@ document.getElementById('sortBy').addEventListener('change', render);
 document.querySelectorAll('th[data-sort]').forEach(th => {
   th.addEventListener('click', () => {
     document.getElementById('sortBy').value = th.dataset.sort;
-    render();
+    
+// Dynamic sticky header offset
+(function() {
+  function setHeaderOffset() {
+    const h = document.querySelector('.header');
+    if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+  }
+  setHeaderOffset();
+  window.addEventListener('resize', setHeaderOffset);
+  new MutationObserver(setHeaderOffset).observe(document.querySelector('.header'), {childList:true, subtree:true});
+})();
+
+render();
   });
 });
+
+
+// Dynamic sticky header offset
+(function() {
+  function setHeaderOffset() {
+    const h = document.querySelector('.header');
+    if (h) document.documentElement.style.setProperty('--header-h', h.offsetHeight + 'px');
+  }
+  setHeaderOffset();
+  window.addEventListener('resize', setHeaderOffset);
+  new MutationObserver(setHeaderOffset).observe(document.querySelector('.header'), {childList:true, subtree:true});
+})();
 
 render();
 </script>
