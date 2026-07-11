@@ -28,20 +28,30 @@ tr:hover{background:#1e3a5f}
 .legend{display:flex;gap:12px;margin-top:6px;font-size:11px}
 .legend span{display:flex;align-items:center;gap:4px}
 .legend .dot{width:10px;height:10px;border-radius:2px}
+.search{width:100%;padding:8px 12px;background:#0f172a;border:1px solid #475569;border-radius:6px;color:#e2e8f0;font-size:13px;margin-bottom:10px}
+.search:focus{outline:none;border-color:#6366f1}
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:1000;justify-content:center;align-items:center}
+.modal-overlay.active{display:flex}
+.modal{background:#1e293b;border-radius:12px;padding:20px;max-width:500px;width:90%;max-height:80vh;overflow-y:auto}
+.modal h3{color:#fff;margin-bottom:12px}
+.modal .close{float:right;cursor:pointer;color:#94a3b8;font-size:20px}
+.modal .close:hover{color:#fff}
+.modal table{margin-top:8px}
+.modal .mini-chart{height:100px;margin:10px 0}
 </style>
 </head>
 <body>
 <div class="header">
     <h1>CDG7 - Prep Tracker</h1>
-    <div class="maj">Nuit 10/07 - 11/07 | MAJ 01h50 (#5)</div>
+    <div class="maj">Nuit 10/07 - 11/07 | MAJ 02h05 (#6)</div>
 </div>
 
 <div class="kpi-grid">
     <div class="kpi"><div class="value">15</div><div class="label">Prepareurs</div></div>
-    <div class="kpi"><div class="value">42.6h</div><div class="label">Heures Prep</div></div>
-    <div class="kpi"><div class="value">7,424</div><div class="label">Units Prep</div></div>
-    <div class="kpi"><div class="value">174</div><div class="label">UPH Moy (FCLM)</div></div>
-    <div class="kpi red"><div class="value">9,187</div><div class="label">Units Perdues</div></div>
+    <div class="kpi"><div class="value">45.1h</div><div class="label">Heures Prep</div></div>
+    <div class="kpi"><div class="value">7,724</div><div class="label">Units Prep</div></div>
+    <div class="kpi"><div class="value">171</div><div class="label">UPH Moy (FCLM)</div></div>
+    <div class="kpi red"><div class="value">9,465</div><div class="label">Units Perdues</div></div>
 </div>
 
 <div class="section">
@@ -54,6 +64,7 @@ tr:hover{background:#1e3a5f}
 <tr><td>00h30</td><td><b>173</b></td><td>5153</td><td>29.8h</td><td><span style='color:#f87171'>&#9660; 2.8</span></td></tr>
 <tr><td>01h23</td><td><b>175</b></td><td>6030</td><td>34.4h</td><td><span style='color:#4ade80'>&#9650; 2.0</span></td></tr>
 <tr><td>01h50</td><td><b>174</b></td><td>7424</td><td>42.6h</td><td><span style='color:#f87171'>&#9660; 0.8</span></td></tr>
+<tr><td>02h05</td><td><b>171</b></td><td>7724</td><td>45.1h</td><td><span style='color:#f87171'>&#9660; 2.9</span></td></tr>
 
     </table>
 </div>
@@ -64,49 +75,131 @@ tr:hover{background:#1e3a5f}
         <span><div class="dot" style="background:#6366f1"></div>Prep</span>
         <span><div class="dot" style="background:#f59e0b"></div>Decant</span>
         <span><div class="dot" style="background:#10b981"></div>Receive</span>
+        <span style="margin-left:auto;color:#64748b;font-style:italic">Cliquer sur un nom pour l'historique</span>
     </div>
-    <table style="margin-top:8px">
+    <input type="text" class="search" placeholder="Rechercher un associe..." oninput="filterTable(this.value)">
+    <table id="aaTable" style="margin-top:4px">
         <tr>
             <th>Nom</th><th>Mgr</th><th>Type</th><th>H.P</th><th>UPH</th><th>Evol</th>
             <th>H.D</th><th>H.R</th><th>%P</th><th>%D</th><th>%R</th><th>U.Perd</th><th>Rep.</th>
         </tr>
-        <tr><td style='font-weight:600'>Seck,Sadio sophie</td><td>Sfaxi</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>0.01</td><td style='color:#4ade80;font-weight:700'>939</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>4.99</td><td>0.46</td><td>0%</td><td>91%</td><td>8%</td><td style='color:#f87171;font-weight:600'>5118</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:0%;background:#6366f1' title='Prep 0%'></div><div style='width:91%;background:#f59e0b' title='DCT 91%'></div><div style='width:8%;background:#10b981' title='RCV 8%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Kantiono,Sandrine</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>2.30</td><td style='color:#4ade80;font-weight:700'>373</td><td><span style='color:#4ade80'>&#9650;20</span></td><td>1.68</td><td>1.48</td><td>42%</td><td>31%</td><td>27%</td><td style='color:#f87171;font-weight:600'>1179</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:42%;background:#6366f1' title='Prep 42%'></div><div style='width:31%;background:#f59e0b' title='DCT 31%'></div><div style='width:27%;background:#10b981' title='RCV 27%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Duburcq,Fabrice</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>3.82</td><td style='color:#4ade80;font-weight:700'>293</td><td><span style='color:#f87171'>&#9660;13</span></td><td>0.93</td><td>0.64</td><td>71%</td><td>17%</td><td>12%</td><td style='color:#f87171;font-weight:600'>461</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:71%;background:#6366f1' title='Prep 71%'></div><div style='width:17%;background:#f59e0b' title='DCT 17%'></div><div style='width:12%;background:#10b981' title='RCV 12%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Keita,Marie Claire</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>4.62</td><td style='color:#facc15;font-weight:700'>193</td><td><span style='color:#f87171'>&#9660;6</span></td><td>0.02</td><td>0.68</td><td>87%</td><td>0%</td><td>13%</td><td style='color:#facc15;font-weight:600'>135</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:87%;background:#6366f1' title='Prep 87%'></div><div style='width:0%;background:#f59e0b' title='DCT 0%'></div><div style='width:13%;background:#10b981' title='RCV 13%'></div></div></td></tr>
-<tr><td style='font-weight:600'>TOTE GBELE,Jeanine Ella</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>3.74</td><td style='color:#facc15;font-weight:700'>176</td><td><span style='color:#f87171'>&#9660;3</span></td><td>0.23</td><td>1.25</td><td>72%</td><td>4%</td><td>24%</td><td style='color:#facc15;font-weight:600'>261</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:72%;background:#6366f1' title='Prep 72%'></div><div style='width:4%;background:#f59e0b' title='DCT 4%'></div><div style='width:24%;background:#10b981' title='RCV 24%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Dada,Lisiane</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>3.62</td><td style='color:#facc15;font-weight:700'>168</td><td><span style='color:#f87171'>&#9660;12</span></td><td>0.21</td><td>1.23</td><td>72%</td><td>4%</td><td>24%</td><td style='color:#facc15;font-weight:600'>243</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:72%;background:#6366f1' title='Prep 72%'></div><div style='width:4%;background:#f59e0b' title='DCT 4%'></div><div style='width:24%;background:#10b981' title='RCV 24%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Wallez,Philippe</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>3.65</td><td style='color:#facc15;font-weight:700'>160</td><td><span style='color:#f87171'>&#9660;8</span></td><td>0.36</td><td>1.25</td><td>69%</td><td>7%</td><td>24%</td><td style='color:#facc15;font-weight:600'>258</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:69%;background:#6366f1' title='Prep 69%'></div><div style='width:7%;background:#f59e0b' title='DCT 7%'></div><div style='width:24%;background:#10b981' title='RCV 24%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Bouillon,Marie Christine</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>4.23</td><td style='color:#facc15;font-weight:700'>156</td><td><span style='color:#4ade80'>&#9650;22</span></td><td>0.01</td><td>1.20</td><td>78%</td><td>0%</td><td>22%</td><td style='color:#facc15;font-weight:600'>189</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:78%;background:#6366f1' title='Prep 78%'></div><div style='width:0%;background:#f59e0b' title='DCT 0%'></div><div style='width:22%;background:#10b981' title='RCV 22%'></div></div></td></tr>
-<tr><td style='font-weight:600'>PIERRET,Cecile</td><td>Sfaxi</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>3.10</td><td style='color:#facc15;font-weight:700'>150</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>1.95</td><td>0.42</td><td>57%</td><td>36%</td><td>8%</td><td style='color:#f87171;font-weight:600'>356</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:57%;background:#6366f1' title='Prep 57%'></div><div style='width:36%;background:#f59e0b' title='DCT 36%'></div><div style='width:8%;background:#10b981' title='RCV 8%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Houssene,Hassanaty</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>2.37</td><td style='color:#f87171;font-weight:700'>147</td><td><span style='color:#4ade80'>&#9650;25</span></td><td>0.81</td><td>1.71</td><td>48%</td><td>17%</td><td>35%</td><td style='color:#f87171;font-weight:600'>372</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:48%;background:#6366f1' title='Prep 48%'></div><div style='width:17%;background:#f59e0b' title='DCT 17%'></div><div style='width:35%;background:#10b981' title='RCV 35%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Chahid,Rachid</td><td>Elkaddouri</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>3.77</td><td style='color:#f87171;font-weight:700'>143</td><td><span style='color:#4ade80'>&#9650;6</span></td><td>0.12</td><td>1.48</td><td>70%</td><td>2%</td><td>28%</td><td style='color:#facc15;font-weight:600'>230</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:70%;background:#6366f1' title='Prep 70%'></div><div style='width:2%;background:#f59e0b' title='DCT 2%'></div><div style='width:28%;background:#10b981' title='RCV 28%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Mangara,Makoroba</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>3.08</td><td style='color:#f87171;font-weight:700'>116</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>1.24</td><td>0.95</td><td>58%</td><td>24%</td><td>18%</td><td style='color:#facc15;font-weight:600'>255</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:58%;background:#6366f1' title='Prep 58%'></div><div style='width:24%;background:#f59e0b' title='DCT 24%'></div><div style='width:18%;background:#10b981' title='RCV 18%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Daniel,Orlane</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>3.78</td><td style='color:#f87171;font-weight:700'>81</td><td><span style='color:#f87171'>&#9660;3</span></td><td>0.28</td><td>0.82</td><td>77%</td><td>6%</td><td>17%</td><td style='color:#94a3b8;font-weight:600'>89</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:77%;background:#6366f1' title='Prep 77%'></div><div style='width:6%;background:#f59e0b' title='DCT 6%'></div><div style='width:17%;background:#10b981' title='RCV 17%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Dessaint,Karim</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>0.24</td><td style='color:#f87171;font-weight:700'>21</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>1.03</td><td>0.00</td><td>19%</td><td>81%</td><td>0%</td><td style='color:#94a3b8;font-weight:600'>22</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:19%;background:#6366f1' title='Prep 19%'></div><div style='width:81%;background:#f59e0b' title='DCT 81%'></div><div style='width:0%;background:#10b981' title='RCV 0%'></div></div></td></tr>
-<tr><td style='font-weight:600'>Samar,Serina</td><td>BADI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>0.25</td><td style='color:#f87171;font-weight:700'>16</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>1.23</td><td>0.00</td><td>17%</td><td>83%</td><td>0%</td><td style='color:#94a3b8;font-weight:600'>19</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:17%;background:#6366f1' title='Prep 17%'></div><div style='width:83%;background:#f59e0b' title='DCT 83%'></div><div style='width:0%;background:#10b981' title='RCV 0%'></div></div></td></tr>
+        <tr onclick="showModal('207316709')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Seck,Sadio sophie</td><td>Sfaxi</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>0.01</td><td style='color:#4ade80;font-weight:700'>939</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>5.14</td><td>0.46</td><td>0%</td><td>92%</td><td>8%</td><td style='color:#f87171;font-weight:600'>5259</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:0%;background:#6366f1'></div><div style='width:92%;background:#f59e0b'></div><div style='width:8%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('204238020')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Kantiono,Sandrine</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>2.30</td><td style='color:#4ade80;font-weight:700'>373</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>1.88</td><td>1.43</td><td>41%</td><td>34%</td><td>25%</td><td style='color:#f87171;font-weight:600'>1235</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:41%;background:#6366f1'></div><div style='width:34%;background:#f59e0b'></div><div style='width:25%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('200302287')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Duburcq,Fabrice</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>4.02</td><td style='color:#4ade80;font-weight:700'>288</td><td><span style='color:#f87171'>&#9660;6</span></td><td>0.93</td><td>0.67</td><td>72%</td><td>17%</td><td>12%</td><td style='color:#f87171;font-weight:600'>460</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:72%;background:#6366f1'></div><div style='width:17%;background:#f59e0b'></div><div style='width:12%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('112871277')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Keita,Marie Claire</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>4.91</td><td style='color:#facc15;font-weight:700'>190</td><td><span style='color:#f87171'>&#9660;3</span></td><td>0.02</td><td>0.69</td><td>87%</td><td>0%</td><td>12%</td><td style='color:#facc15;font-weight:600'>135</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:87%;background:#6366f1'></div><div style='width:0%;background:#f59e0b'></div><div style='width:12%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('112702178')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>TOTE GBELE,Jeanine Ella</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>4.13</td><td style='color:#facc15;font-weight:700'>176</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>0.23</td><td>1.25</td><td>74%</td><td>4%</td><td>22%</td><td style='color:#facc15;font-weight:600'>261</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:74%;background:#6366f1'></div><div style='width:4%;background:#f59e0b'></div><div style='width:22%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('207399485')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Dada,Lisiane</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>3.74</td><td style='color:#facc15;font-weight:700'>172</td><td><span style='color:#4ade80'>&#9650;4</span></td><td>0.41</td><td>1.23</td><td>70%</td><td>8%</td><td>23%</td><td style='color:#facc15;font-weight:600'>282</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:70%;background:#6366f1'></div><div style='width:8%;background:#f59e0b'></div><div style='width:23%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('201221850')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Wallez,Philippe</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>4.00</td><td style='color:#facc15;font-weight:700'>156</td><td><span style='color:#f87171'>&#9660;4</span></td><td>0.36</td><td>1.25</td><td>71%</td><td>6%</td><td>22%</td><td style='color:#facc15;font-weight:600'>251</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:71%;background:#6366f1'></div><div style='width:6%;background:#f59e0b'></div><div style='width:22%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('109911539')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Bouillon,Marie Christine</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>4.44</td><td style='color:#facc15;font-weight:700'>154</td><td><span style='color:#f87171'>&#9660;2</span></td><td>0.01</td><td>1.16</td><td>79%</td><td>0%</td><td>21%</td><td style='color:#facc15;font-weight:600'>180</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:79%;background:#6366f1'></div><div style='width:0%;background:#f59e0b'></div><div style='width:21%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('203227835')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>PIERRET,Cecile</td><td>Sfaxi</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>3.10</td><td style='color:#facc15;font-weight:700'>150</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>2.10</td><td>0.42</td><td>55%</td><td>37%</td><td>7%</td><td style='color:#f87171;font-weight:600'>379</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:55%;background:#6366f1'></div><div style='width:37%;background:#f59e0b'></div><div style='width:7%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('205168778')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Chahid,Rachid</td><td>Elkaddouri</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>3.84</td><td style='color:#facc15;font-weight:700'>150</td><td><span style='color:#4ade80'>&#9650;7</span></td><td>0.12</td><td>1.66</td><td>68%</td><td>2%</td><td>30%</td><td style='color:#facc15;font-weight:600'>267</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:68%;background:#6366f1'></div><div style='width:2%;background:#f59e0b'></div><div style='width:30%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('207399397')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Houssene,Hassanaty</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>2.76</td><td style='color:#f87171;font-weight:700'>135</td><td><span style='color:#f87171'>&#9660;13</span></td><td>0.81</td><td>1.80</td><td>51%</td><td>15%</td><td>34%</td><td style='color:#f87171;font-weight:600'>351</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:51%;background:#6366f1'></div><div style='width:15%;background:#f59e0b'></div><div style='width:34%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('200708239')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Mangara,Makoroba</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#312e81;color:#a5b4fc'>AMZN</span></td><td>3.08</td><td style='color:#f87171;font-weight:700'>116</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>1.38</td><td>0.96</td><td>57%</td><td>25%</td><td>18%</td><td style='color:#facc15;font-weight:600'>272</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:57%;background:#6366f1'></div><div style='width:25%;background:#f59e0b'></div><div style='width:18%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('207399444')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Daniel,Orlane</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>4.24</td><td style='color:#f87171;font-weight:700'>83</td><td><span style='color:#4ade80'>&#9650;3</span></td><td>0.28</td><td>0.82</td><td>79%</td><td>5%</td><td>15%</td><td style='color:#94a3b8;font-weight:600'>92</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:79%;background:#6366f1'></div><div style='width:5%;background:#f59e0b'></div><div style='width:15%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('206184908')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Dessaint,Karim</td><td>MARDI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>0.24</td><td style='color:#f87171;font-weight:700'>21</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>1.03</td><td>0.00</td><td>19%</td><td>81%</td><td>0%</td><td style='color:#94a3b8;font-weight:600'>22</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:19%;background:#6366f1'></div><div style='width:81%;background:#f59e0b'></div><div style='width:0%;background:#10b981'></div></div></td></tr>
+<tr onclick="showModal('207436868')" style='cursor:pointer'><td style='font-weight:600;color:#93c5fd'>Samar,Serina</td><td>BADI</td><td><span style='padding:2px 6px;border-radius:3px;font-size:11px;background:#1e3a5f;color:#7dd3fc'>3PTY</span></td><td>0.25</td><td style='color:#f87171;font-weight:700'>16</td><td><span style='color:#4ade80'>&#9650;0</span></td><td>1.23</td><td>0.00</td><td>17%</td><td>83%</td><td>0%</td><td style='color:#94a3b8;font-weight:600'>19</td><td><div style='display:flex;height:16px;border-radius:3px;overflow:hidden;min-width:70px'><div style='width:17%;background:#6366f1'></div><div style='width:83%;background:#f59e0b'></div><div style='width:0%;background:#10b981'></div></div></td></tr>
 
     </table>
 </div>
 
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+        <span class="close" onclick="closeModal()">&#10005;</span>
+        <h3 id="modalTitle"></h3>
+        <div class="mini-chart"><canvas id="modalChart"></canvas></div>
+        <table id="modalTable">
+            <tr><th>MAJ</th><th>UPH</th><th>Trend</th></tr>
+        </table>
+    </div>
+</div>
+
 <script>
+const historyData = [{"timestamp": "23h49", "global_uph": 184.59, "total_units": 3990, "total_hours": 21.62, "aa_count": 15, "rates": {"109911539": {"name": "Bouillon,Marie Christine", "uph": 128.1}, "112702178": {"name": "TOTE GB\u00c3\u0083\u00c2\u0089L\u00c3\u0083\u00c2\u0089,Jeanine Ella", "uph": 199.67}, "112871277": {"name": "Keita,Marie Claire", "uph": 212.94}, "200302287": {"name": "Duburcq,Fabrice", "uph": 260.96}, "200708239": {"name": "Mangara,Makoroba", "uph": 143.79}, "201221850": {"name": "Wallez,Philippe", "uph": 174.56}, "203227835": {"name": "PIERRET,C\u00c3\u0083\u00c2\u00a9cile", "uph": 176.67}, "204238020": {"name": "Kantiono,Sandrine", "uph": 401.67}, "205168778": {"name": "Chahid,Rachid", "uph": 136.88}, "206184908": {"name": "Dessaint,Karim", "uph": 20.91}, "207316709": {"name": "Seck,Sadio sophie", "uph": 939.13}, "207399397": {"name": "Houssene,Hassanaty", "uph": 138.46}, "207399444": {"name": "Daniel,Orlane", "uph": 91.45}, "207399485": {"name": "Dada,Lisiane", "uph": 217.41}, "207436868": {"name": "Samar,Serina", "uph": 15.74}}}, {"timestamp": "00h03", "global_uph": 175.95, "total_units": 4496, "total_hours": 25.55, "aa_count": 15, "rates": {"109911539": {"name": "Bouillon,Marie Christine", "uph": 120.47}, "112702178": {"name": "TOTE GB\u00c3\u0083\u00c2\u0089L\u00c3\u0083\u00c2\u0089,Jeanine Ella", "uph": 167.69}, "112871277": {"name": "Keita,Marie Claire", "uph": 220.86}, "200302287": {"name": "Duburcq,Fabrice", "uph": 249.01}, "200708239": {"name": "Mangara,Makoroba", "uph": 125.37}, "201221850": {"name": "Wallez,Philippe", "uph": 180.96}, "203227835": {"name": "PIERRET,C\u00c3\u0083\u00c2\u00a9cile", "uph": 156.88}, "204238020": {"name": "Kantiono,Sandrine", "uph": 459.2}, "205168778": {"name": "Chahid,Rachid", "uph": 117.41}, "206184908": {"name": "Dessaint,Karim", "uph": 20.91}, "207316709": {"name": "Seck,Sadio sophie", "uph": 939.13}, "207399397": {"name": "Houssene,Hassanaty", "uph": 137.91}, "207399444": {"name": "Daniel,Orlane", "uph": 93.54}, "207399485": {"name": "Dada,Lisiane", "uph": 176.3}, "207436868": {"name": "Samar,Serina", "uph": 15.74}}}, {"timestamp": "00h30", "global_uph": 173.14, "total_units": 5153, "total_hours": 29.76, "aa_count": 15, "rates": {"109911539": {"name": "Bouillon,Marie Christine", "uph": 133.07}, "112702178": {"name": "TOTE GB\u00c3\u0083\u00c2\u0089L\u00c3\u0083\u00c2\u0089,Jeanine Ella", "uph": 161.18}, "112871277": {"name": "Keita,Marie Claire", "uph": 200.63}, "200302287": {"name": "Duburcq,Fabrice", "uph": 273.87}, "200708239": {"name": "Mangara,Makoroba", "uph": 121.3}, "201221850": {"name": "Wallez,Philippe", "uph": 168.28}, "203227835": {"name": "PIERRET,C\u00c3\u0083\u00c2\u00a9cile", "uph": 152.81}, "204238020": {"name": "Kantiono,Sandrine", "uph": 414.3}, "205168778": {"name": "Chahid,Rachid", "uph": 107.92}, "206184908": {"name": "Dessaint,Karim", "uph": 20.91}, "207316709": {"name": "Seck,Sadio sophie", "uph": 939.13}, "207399397": {"name": "Houssene,Hassanaty", "uph": 152.18}, "207399444": {"name": "Daniel,Orlane", "uph": 88.84}, "207399485": {"name": "Dada,Lisiane", "uph": 176.31}, "207436868": {"name": "Samar,Serina", "uph": 15.74}}}, {"timestamp": "01h23", "global_uph": 175.16, "total_units": 6030, "total_hours": 34.43, "aa_count": 15, "rates": {"109911539": {"name": "Bouillon,Marie Christine", "uph": 133.74}, "112702178": {"name": "TOTE GB\u00c3\u0089L\u00c3\u0089,Jeanine Ella", "uph": 179.53}, "112871277": {"name": "Keita,Marie Claire", "uph": 198.6}, "200302287": {"name": "Duburcq,Fabrice", "uph": 306.64}, "200708239": {"name": "Mangara,Makoroba", "uph": 116.43}, "201221850": {"name": "Wallez,Philippe", "uph": 168.14}, "203227835": {"name": "PIERRET,C\u00c3\u00a9cile", "uph": 150.28}, "204238020": {"name": "Kantiono,Sandrine", "uph": 353.21}, "205168778": {"name": "Chahid,Rachid", "uph": 137.28}, "206184908": {"name": "Dessaint,Karim", "uph": 20.91}, "207316709": {"name": "Seck,Sadio sophie", "uph": 939.13}, "207399397": {"name": "Houssene,Hassanaty", "uph": 121.96}, "207399444": {"name": "Daniel,Orlane", "uph": 83.64}, "207399485": {"name": "Dada,Lisiane", "uph": 180.4}, "207436868": {"name": "Samar,Serina", "uph": 15.74}}}, {"timestamp": "01h50", "global_uph": 174.33, "total_units": 7424, "total_hours": 42.59, "aa_count": 15, "rates": {"109911539": {"name": "Bouillon,Marie Christine", "uph": 155.99}, "112702178": {"name": "TOTE GBELE,Jeanine Ella", "uph": 176.07}, "112871277": {"name": "Keita,Marie Claire", "uph": 192.96}, "200302287": {"name": "Duburcq,Fabrice", "uph": 293.45}, "200708239": {"name": "Mangara,Makoroba", "uph": 116.43}, "201221850": {"name": "Wallez,Philippe", "uph": 160.23}, "203227835": {"name": "PIERRET,Cecile", "uph": 150.28}, "204238020": {"name": "Kantiono,Sandrine", "uph": 373.0}, "205168778": {"name": "Chahid,Rachid", "uph": 143.47}, "206184908": {"name": "Dessaint,Karim", "uph": 20.91}, "207316709": {"name": "Seck,Sadio sophie", "uph": 939.13}, "207399397": {"name": "Houssene,Hassanaty", "uph": 147.45}, "207399444": {"name": "Daniel,Orlane", "uph": 80.76}, "207399485": {"name": "Dada,Lisiane", "uph": 168.43}, "207436868": {"name": "Samar,Serina", "uph": 15.74}}}, {"timestamp": "02h05", "global_uph": 171.41, "total_units": 7724, "total_hours": 45.06, "aa_count": 15, "rates": {"109911539": {"name": "Bouillon,Marie Christine", "uph": 154.09}, "112702178": {"name": "TOTE GBELE,Jeanine Ella", "uph": 176.07}, "112871277": {"name": "Keita,Marie Claire", "uph": 189.92}, "200302287": {"name": "Duburcq,Fabrice", "uph": 287.65}, "200708239": {"name": "Mangara,Makoroba", "uph": 116.43}, "201221850": {"name": "Wallez,Philippe", "uph": 155.78}, "203227835": {"name": "PIERRET,Cecile", "uph": 150.28}, "204238020": {"name": "Kantiono,Sandrine", "uph": 373.0}, "205168778": {"name": "Chahid,Rachid", "uph": 150.26}, "206184908": {"name": "Dessaint,Karim", "uph": 20.91}, "207316709": {"name": "Seck,Sadio sophie", "uph": 939.13}, "207399397": {"name": "Houssene,Hassanaty", "uph": 134.57}, "207399444": {"name": "Daniel,Orlane", "uph": 83.32}, "207399485": {"name": "Dada,Lisiane", "uph": 172.24}, "207436868": {"name": "Samar,Serina", "uph": 15.74}}}];
+let modalChartInstance = null;
+
+function filterTable(val) {
+    const rows = document.querySelectorAll('#aaTable tr');
+    const v = val.toLowerCase();
+    rows.forEach((row, i) => {
+        if (i === 0) return;
+        row.style.display = row.textContent.toLowerCase().includes(v) ? '' : 'none';
+    });
+}
+
+function showModal(aaId) {
+    const rates = [];
+    const labels = [];
+    historyData.forEach(s => {
+        const r = s.rates[aaId];
+        if (r) {
+            labels.push(s.timestamp);
+            rates.push(typeof r === 'object' ? r.uph : r);
+        }
+    });
+    
+    if (rates.length === 0) return;
+    
+    const name = historyData[historyData.length-1].rates[aaId];
+    document.getElementById('modalTitle').textContent = (typeof name === 'object' ? name.name : aaId) + ' - Evolution UPH';
+    
+    // Build table
+    let html = '<tr><th>MAJ</th><th>UPH</th><th>Trend</th></tr>';
+    rates.forEach((r, i) => {
+        let trend = '';
+        if (i > 0) {
+            const diff = r - rates[i-1];
+            const arrow = diff >= 0 ? '&#9650;' : '&#9660;';
+            const color = diff >= 0 ? '#4ade80' : '#f87171';
+            trend = '<span style="color:'+color+'">'+arrow+' '+Math.abs(diff).toFixed(0)+'</span>';
+        }
+        html += '<tr><td>'+labels[i]+'</td><td><b>'+r.toFixed(0)+'</b></td><td>'+trend+'</td></tr>';
+    });
+    document.getElementById('modalTable').innerHTML = html;
+    
+    // Chart
+    if (modalChartInstance) modalChartInstance.destroy();
+    modalChartInstance = new Chart(document.getElementById('modalChart'), {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: rates,
+                borderColor: '#6366f1',
+                backgroundColor: 'rgba(99,102,241,0.1)',
+                fill: true, tension: 0.3, pointRadius: 4, pointBackgroundColor: '#6366f1'
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
+                y: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { color: '#334155' } }
+            }
+        }
+    });
+    
+    document.getElementById('modalOverlay').classList.add('active');
+}
+
+function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+}
+
 new Chart(document.getElementById('uphChart'), {
     type: 'line',
     data: {
-        labels: ["23h49", "00h03", "00h30", "01h23", "01h50"],
+        labels: ["23h49", "00h03", "00h30", "01h23", "01h50", "02h05"],
         datasets: [{
-            data: [184.59, 175.95, 173.14, 175.16, 174.33],
+            data: [184.59, 175.95, 173.14, 175.16, 174.33, 171.41],
             borderColor: '#6366f1',
             backgroundColor: 'rgba(99,102,241,0.1)',
-            fill: true,
-            tension: 0.3,
-            pointRadius: 4,
-            pointBackgroundColor: '#6366f1'
+            fill: true, tension: 0.3, pointRadius: 4, pointBackgroundColor: '#6366f1'
         }]
     },
     options: {
-        responsive: true,
-        maintainAspectRatio: false,
+        responsive: true, maintainAspectRatio: false,
         plugins: { legend: { display: false } },
         scales: {
             x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { display: false } },
